@@ -1,0 +1,16 @@
+@media screen and (min-width:768px) {
+    main {
+        grid-template-areas:
+            "course__work course__work place"
+            "course__certificate course__certificate course__certificate"
+        ;
+    }
+
+    .course__certificate {
+        grid-area: course__certificate;
+    }
+
+    .course__certificate div {
+        flex-direction: row;
+    }
+}

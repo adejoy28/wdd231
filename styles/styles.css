@@ -151,6 +151,22 @@ main {
     /* box-shadow: var(--box-shadow); */
 }
 
+/* Place styles */
+.place div {
+    padding: 0 10px;
+}
+
+.place img {
+    /* width: 90%; */
+    width: 100%;
+    /* padding: 0 10px; */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.place p {
+    text-align: center;
+}
 
 /* Course__Certificate Styles */
 .course__certificate ul {
@@ -163,12 +179,12 @@ main {
 
 .course__certificate ul li {
     list-style: none;
-    padding: 0.4rem 1rem;
+    padding: .4rem .6rem;
     border: var(--dark-color) 1px solid;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     background-color: var(--dark-color);
-    width: 100%;
+    width: 25%;
     text-align: center;
 }
 
@@ -176,7 +192,7 @@ main {
     color: var(--light-color);
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem .5rem;
 }
 
 .course__certificate ul li a:hover {
