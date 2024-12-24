@@ -4,33 +4,84 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Professional Home Page</title>
+        <title>WDD 231 - Home page</title>
+        <meta name="description" content="This is the home page for WDD 231">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Adebayo">
+
+        <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/styles-medium.css">
+        <link rel="stylesheet" href="styles/styles-large.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+        <script src="scripts/scripts.js" defer></script>
     </head>
 
     <body>
         <header>
-            <h1>Welcome to My Professional Home Page</h1>
+            <div class="header__container">
+                <div class="brand">
+                    <img src="images/me.jpeg" alt="me">
+                    <h1>John Adebayo</h1>
+                </div>
+                <button id="hamburger" class="hamburger"></button>
+            </div>
             <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="#">Chamber</a>
+                <a href="github.com/adejoy28">Github Profile</a>
+                <a href="linkedin.com/in/johnayomide31">LinkedIn</a>
             </nav>
         </header>
         <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Brief description about yourself or your business.</p>
+            <section class="course__work">
+                <h2>Course Work</h2>
+                <ul>
+                    <li>
+                        <h3>WDD 131</h3>
+                        <p>Web Frontend Development I</p>
+                    </li>
+                    <li>
+                        <h3>WDD 230</h3>
+                        <p>Web Frontend Development II</p>
+                    </li>
+                    <li>
+                        <h3>WDD 231</h3>
+                        <p>Web Frontend Development III</p>
+                    </li>
             </section>
-            <section id="services">
-                <h2>Services</h2>
-                <p>Details about the services you offer.</p>
+            <section class="place">
+                <h2>Ibadan, Nigeria</h2>
+                <div class="place__img">
+                    <img src="images/ibadan.jpg" alt="Ibadan">
+                    <p>Baobab tree</p>
+                </div>
+            </section>
+            <section class="course__certificate">
+                <h2>Web and Computer Programming Certificate</h2>
+                <ul>
+                    <li><a href="all">All</a></li>
+                    <li><a href="cse">CSE</a></li>
+                    <li><a href="wdd">WDD</a></li>
+                </ul>
+                <hr>
+                <div>
+                    <h3>CSE 110</h3>
+                    <h3>CSE 111</h3>
+                    <h3>CSE 210</h3>
+                    <h3>WDD 130</h3>
+                    <h3>WDD 131</h3>
+                    <h3>WDD 231</h3>
+                </div>
             </section>
         </main>
         <footer>
-            <p>&copy; 2023 Your Name. All rights reserved.</p>
+            <p>&copy; <span id="Year"></span> 🎓John Ayomide Adebayo🎓 Nigeria</p>
+            <p class="lstMod">{Last Modification: <span id="lastModified"></span>}</p>
         </footer>
     </body>
 

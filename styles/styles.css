@@ -1,23 +1,105 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #444;
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --link-hover-text-decoration: underline;
+    --border-radius: 0.25rem;
+    --transition: 0.5s;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --box-shadow-active: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --box-shadow-focus: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --box-shadow-light: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: "Roboto", serif;
+    font-weight: 400;
     background-color: #f4f4f4;
     color: #333;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 100;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
 
 /* Header Styles */
 header {
     background: #333;
     color: #fff;
-    padding: 10px 0;
+    /* padding: 10px 0; */
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
+header .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 20px;
 }
+
+header .header__container .brand {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+header .header__container .brand img {
+    max-width: 80px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+}
+
+header h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* font-size: 1rem; */
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    /* border: #0056b3 solid 2px; */
+}
+
+/* Hambugger Menu styles */
+.hamburger {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+    background: transparent;
+}
+
+.hamburger::before {
+    content: "☰";
+}
+
+button.open::before {
+    content: "✖";
+    background: transparent;
+}
+
+.open {
+    display: block;
+    padding: 0;
+}
+
 
 /* Navigation Styles */
 nav {
@@ -25,21 +107,98 @@ nav {
     color: #fff;
     padding: 10px;
     text-align: center;
+    display: none;
 }
 
 nav a {
     color: #fff;
-    margin: 0 10px;
+    /* margin: 0 1?0px; */
     text-decoration: none;
+    display: block;
+    padding: 1.2rem 1rem;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #000;
 }
 
 /* Main Content Styles */
 main {
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.course__work,
+.place,
+.course__certificate {
+    display: block;
+    border: var(--dark-color) 1px solid;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.course__work h2,
+.place h2,
+.course__certificate h2 {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 10px 0;
+    border: var(--dark-color) 1px solid;
+    /* box-shadow: var(--box-shadow); */
+}
+
+
+/* Course__Certificate Styles */
+.course__certificate ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.course__certificate ul li {
+    list-style: none;
+    padding: 0.4rem 1rem;
+    border: var(--dark-color) 1px solid;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--dark-color);
+    width: 100%;
+    text-align: center;
+}
+
+.course__certificate ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+}
+
+.course__certificate ul li a:hover {
+    color: var(--light-color);
+    background-color: var(--dark-color);
+}
+
+.course__certificate div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.course__certificate div h3 {
+    padding: .9rem;
+    width: 100%;
+    text-align: center;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-weight: 400;
 }
 
 /* Footer Styles */
@@ -48,7 +207,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
 }
