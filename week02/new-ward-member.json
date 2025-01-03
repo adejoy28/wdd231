@@ -1,0 +1,38 @@
+[
+    {
+        "familyName": "Smith",
+        "movedInDate": "2020-01-01",
+        "numberOfPeople": 4,
+        "visitedByBishopric": true,
+        "familyMembers": [
+            {
+                "name": "John",
+                "gender": "Male",
+                "birthdate": "1990-01-01"
+            },
+            {
+                "name": "Jane",
+                "gender": "Female",
+                "birthdate": "1992-01-01"
+            },
+            {
+                "name": "Jack",
+                "gender": "Male",
+                "birthdate": "2010-01-01"
+            }
+        ]
+    },
+    {
+        "familyName": "Doe",
+        "movedInDate": "2020-01-01",
+        "numberOfPeople": 2,
+        "visitedByBishopric": false,
+        "familyMembers": [
+            {
+                "name": "Joe",
+                "gender": "Male",
+                "birthdate": "1990-01-01"
+            }
+        ]
+    }
+]

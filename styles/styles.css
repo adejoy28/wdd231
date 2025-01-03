@@ -179,7 +179,7 @@ main {
 
 .course__certificate ul li {
     list-style: none;
-    padding: .4rem .6rem;
+    /* padding: .4rem .6rem; */
     border: var(--dark-color) 1px solid;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -192,7 +192,9 @@ main {
     color: var(--light-color);
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0.4rem .5rem;
+    padding: .8rem 0;
+    width: 100%;
+    display: block;
 }
 
 .course__certificate ul li a:hover {
@@ -212,8 +214,23 @@ main {
     padding: .9rem;
     width: 100%;
     text-align: center;
-    background-color: var(--dark-color);
+    /* background-color: var(--dark-color); */
     color: var(--light-color);
+    font-weight: 400;
+}
+
+.true {
+    background-color: #28a745;
+    color: var(--light-color);
+}
+
+.false {
+    background-color: var(--danger-color);
+    color: var(--light-color);
+}
+
+.course__certificate .t__Credits__Num {
+    padding: 0 30px;
     font-weight: 400;
 }
 

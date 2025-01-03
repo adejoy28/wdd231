@@ -1,16 +1,3 @@
-'use strict';
-
-const menuButton = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav');
-
-menuButton.addEventListener('click', () => {
-    // alert('Menu button clicked!');
-    navMenu.classList.toggle('open');
-    menuButton.classList.toggle('open');
-});
-
-
-
 
 const today = new Date();
 const currentYear = document.getElementById("Year");

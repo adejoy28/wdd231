@@ -76,4 +76,53 @@ const courses = [
         ],
         completed: false
     }
-]
+];
+
+// createH3Element(courses);
+
+const div = document.querySelector("#c__cert__div");
+
+
+// filtering aspect of the course certificate sections
+
+const allCourses = document.querySelector("#all__cert");
+const cse = document.querySelector("#cse");
+const wdd = document.querySelector("#wdd");
+
+
+allCourses.addEventListener("click", () => {
+    createH3Element(courses);
+});
+
+cse.addEventListener("click", () => {
+    // createTempleCard(temples.filter(temple => temple.dedicated.substring(0, 3).includes("19")));
+    createH3Element(courses.filter(course => GetValue(course.subject, "CSE")));
+});
+wdd.addEventListener("click", () => {
+    createH3Element(courses.filter(course => GetValue(course.subject, "WDD")));
+    // createH3Element(courses.filter(course => course.subject.substring(0, 2).includes("wdd")));
+});
+
+
+function createH3Element(filteredCourses) {
+    div.innerHTML = "";
+    const totalCreditsNumber = document.querySelector("#creditNum");
+    let sum = 0;
+    filteredCourses.forEach(course => {
+        const h3 = document.createElement("h3");
+        h3.textContent = `${course.subject} ${course.number}`;
+        h3.setAttribute('class', course.completed);
+        div.appendChild(h3);
+        sum += course.credits;
+        // console.log(div);
+    });
+    totalCreditsNumber.textContent = sum;
+}
+
+function GetValue(value, filter) {
+    if (value == filter) {
+        return value;
+    }
+}
+
+allCourses.click();

@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+    --header-font: 'Arial', sans-serif;
+    --body-font: 'Verdana', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+}
+
+header img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+header .site-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+header .site-title h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header .site-title p {
+    margin: 0;
+    font-size: 1em;
+    color: var(--secondary-color);
+}
+
+header .hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+header p {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: var(--header-font);
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+    font-family: var(--header-font);
+}
+
+p {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

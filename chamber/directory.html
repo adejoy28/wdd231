@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timbuktu Chamber of Commerce</title>
+        <meta name="description" content="This is a directory of members in the area">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Adebayo">
+
+        <!-- for Social Sharing -->
+
+        <!--  Essential META Tags -->
+        <meta property="og:title" content="Chamber of Commerce">
+        <meta property="og:type" content="This displays members directory" />
+        <meta property="og:image" content="images/favicon.ico">
+        <meta property="og:url" content="adejoy28.github.io/wdd231/chamber/directory.html">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!--  Non-Essential, But Recommended -->
+        <meta property="og:description" content="description goes her">
+        <meta property="og:site_name" content="Site Name goes here">
+        <meta name="twitter:image:alt" content="Alt text for image">
+
+        <!--  Non-Essential, But Required for Analytics -->
+        <meta property="fb:app_id" content="your_app_id" />
+        <meta name="twitter:site" content="@website-username">
+
+        <!-- Social Sharing ends -->
+
+
+        <link rel="icon" href="images/favicon.ico**__">
+
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/styles-medium.css">
+        <link rel="stylesheet" href="styles/styles-large.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+        <script src="scripts/scripts.js" defer></script>
+        <script src="scripts/getdates.js" defer></script>
+        <!-- <script src="scripts/test.js" defer></script> -->
+    </head>
+
+    <body>
+        <header>
+            <img src="images/logo.png" alt="Chamber of Commerce Logo">
+            <div class="site-title">
+                <h1>Timbuktu</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+            <button class="hamburger-btn"></button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Business Directory</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <!-- <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">Event</a></li> -->
+                </ul>
+            </nav>
+            <p>🌓</p>
+        </header>
+        <main>
+            <div id="cards"></div>
+        </main>
+        <footer>
+        </footer>
+        <footer>
+            <p>&copy; <span id="Year"></span> John Adebayo | Chamber of Commerce</p>
+            <p class="lstMod">{Last Modification: <span id="lastModified"></span>}</p>
+        </footer>
