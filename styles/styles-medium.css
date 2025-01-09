@@ -1,9 +1,59 @@
-@media screen and (min-width:768px) {
+@media screen and (min-width:650px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header__container .hamburger {
+        display: none;
+    }
+
+    hr {
+        width: 99%;
+        padding: 0;
+        margin: 0 auto;
+        color: #46464667;
+        display: inline-block;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        max-width: 1000px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        margin: 0 5px;
+        border-radius: var(--border-radius);
+        transition: background-color 0.5s;
+    }
+
+    nav a:hover {
+        background-color: var(--secondary-color);
+        color: #ddd;
+    }
+
     main {
+        max-width: 1000px;
+        margin: 0 auto;
         grid-template-areas:
             "course__work course__work place"
             "course__certificate course__certificate course__certificate"
         ;
+    }
+
+    /* Place Styles */
+    .place {
+        margin-right: -20px;
     }
 
     .course__certificate {
@@ -12,5 +62,10 @@
 
     .course__certificate div {
         flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .course__certificate div h3 {
+        flex: 30%;
     }
 }

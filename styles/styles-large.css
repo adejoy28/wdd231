@@ -1,33 +1,8 @@
 @media screen and (min-width:850px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
-    .header__container .hamburger {
-        display: none;
-        border: 1px solid #fff;
-    }
 
-    nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-    }
 
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 15px;
-        margin: 0 5px;
-        border-radius: var(--border-radius);
-        transition: background-color 0.5s;
-    }
-
-    nav a:hover {
-        background-color: var(--secondary-color);
-        color: #ddd;
+    .course__certificate div h3 {
+        flex: 25%;
     }
 }

@@ -78,6 +78,13 @@ const courses = [
     }
 ];
 
+const items = [
+    { name: 'Apple', price: 1 },
+    { name: 'Orange', price: 2 },
+    { name: 'Mango', price: 3 },
+];
+
+
 // createH3Element(courses);
 
 const div = document.querySelector("#c__cert__div");
@@ -86,43 +93,59 @@ const div = document.querySelector("#c__cert__div");
 // filtering aspect of the course certificate sections
 
 const allCourses = document.querySelector("#all__cert");
-const cse = document.querySelector("#cse");
-const wdd = document.querySelector("#wdd");
+const cseBtn = document.querySelector("#cse");
+const wddBtn = document.querySelector("#wdd");
 
 
 allCourses.addEventListener("click", () => {
     createH3Element(courses);
+    reducer(courses);
+    // console.log(courses.reduce((accumulator, item) => accumulator += item.credits, 0));
+    // filterCredit(courses);
 });
 
-cse.addEventListener("click", () => {
+cseBtn.addEventListener("click", () => {
     // createTempleCard(temples.filter(temple => temple.dedicated.substring(0, 3).includes("19")));
-    createH3Element(courses.filter(course => GetValue(course.subject, "CSE")));
+    const cseCourses = courses.filter(course => GetValue(course.subject, "CSE"))
+    createH3Element(cseCourses);
+    reducer(cseCourses);
+    // console.log(courses1.reduce((accumulator, item) => accumulator += item.credits, 0));
 });
-wdd.addEventListener("click", () => {
-    createH3Element(courses.filter(course => GetValue(course.subject, "WDD")));
+// console.log(filterCredit(courses1));
+wddBtn.addEventListener("click", () => {
+    const wddCourses = courses.filter(course => GetValue(course.subject, "WDD"));
+    createH3Element(wddCourses);//courses.filter(course => GetValue(course.subject, "WDD")));
+    reducer(wddCourses);
+    // console.log(wdd.reduce((accumulator, item) => accumulator += item.credits, 0));
+    // filterCredit(courses.filter(course => GetValue(course.subject, "WDD")));
     // createH3Element(courses.filter(course => course.subject.substring(0, 2).includes("wdd")));
 });
+
+// const totalcredits = fourses.reduce((accumulator, course) => {
+//     // console.log(`${typeof accumulator} += ${course}`)
+//     return accumulator += course.credits;
+// });
+
+function reducer(courseLists) {
+    let totalCreditsNumber = document.querySelector("#creditNum");
+    totalCreditsNumber.textContent = courseLists.reduce((accumulator, course) => accumulator += course.credits, 0);
+}
+
 
 
 function createH3Element(filteredCourses) {
     div.innerHTML = "";
-    const totalCreditsNumber = document.querySelector("#creditNum");
-    let sum = 0;
     filteredCourses.forEach(course => {
         const h3 = document.createElement("h3");
         h3.textContent = `${course.subject} ${course.number}`;
         h3.setAttribute('class', course.completed);
         div.appendChild(h3);
-        sum += course.credits;
-        // console.log(div);
     });
-    totalCreditsNumber.textContent = sum;
 }
 
 function GetValue(value, filter) {
-    if (value == filter) {
+    if (value == filter)
         return value;
-    }
 }
 
 allCourses.click();
