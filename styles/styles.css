@@ -1,15 +1,12 @@
 :root {
-    --primary-color: #333;
+    --primary-color: #2e2e2e;
     --secondary-color: #444;
     --dark-color: #333;
     --light-color: #f4f4f4;
-    --danger-color: #dc3545;
-    --success-color: #28a745;
+    --danger-color: #63151c;
+    --success-color: #00360d;
     --warning-color: #ffc107;
     --info-color: #17a2b8;
-    --link-color: #007bff;
-    --link-hover-color: #0056b3;
-    --link-hover-text-decoration: underline;
     --border-radius: 0.25rem;
     --transition: 0.5s;
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -220,12 +217,12 @@ main {
     width: 100%;
     text-align: center;
     /* background-color: var(--dark-color); */
-    color: var(--light-color);
+    /* color: var(--light-color); */
     font-weight: 400;
 }
 
 .true {
-    background-color: #28a745;
+    background-color: #17662a;
     color: var(--light-color);
 }
 
