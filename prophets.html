@@ -5,22 +5,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Prophets Display through fetch means</title>
-
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/prophets.css">
     </head>
 
     <body>
         <header>
             <h1>Latter-day Prophets</h1>
+            <nav>
+                <div>
+                    <button id="all" class="active">No Filter</button>
+                    <button id="idaho">Idaho Born</button>
+                    <button id="nonus">Non-US Born</button>
+                    <button id="ten">15+ Years</button>
+                    <button id="childs">4- Children</button>
+                    <button id="childl">10+ Children</button>
+                    <button id="old">95+ Years</button>
+                </div>
+            </nav>
         </header>
-        <nav>
-            <button id="all" class="active">No Filter</button>
-            <button id="idaho">Idaho Born</button>
-            <button id="nonus">Non-US Born</button>
-            <button id="ten">15+ Years</button>
-            <button id="childs">4- Children</button>
-            <button id="childl">10+ Children</button>
-            <button id="old">95+ Years</button>
-        </nav>
         <main>
             <div id="cards"></div>
         </main>

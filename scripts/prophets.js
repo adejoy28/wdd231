@@ -64,6 +64,14 @@ const displayProphets = (prophets) => {
         const fullName = `${prophet.name} ${prophet.lastname}`;
         h2.textContent = fullName;
 
+        const pBirthdate = document.createElement("p");
+        pBirthdate.innerHTML = `Date of Birth: <span>${prophet.birthdate}</span>`;
+        pBirthdate.setAttribute('class', 'birthdate');
+
+        const pBirthPlace = document.createElement("p");
+        pBirthPlace.textContent = `Place of Birth: ${prophet.birthplace}`;
+        pBirthPlace.setAttribute('class', 'birthplace');
+
         const portrait = document.createElement("img");
         portrait.setAttribute('src', prophet.imageurl);
         portrait.setAttribute('alt', `Portrait of ${fullName} - ${prophet.order}th Latter-day President`);
@@ -72,7 +80,10 @@ const displayProphets = (prophets) => {
         portrait.setAttribute('height', 440);
 
         card.appendChild(h2);
+        card.appendChild(pBirthdate);
+        card.appendChild(pBirthPlace);
         card.appendChild(portrait);
+
 
         cards.appendChild(card);
     });
@@ -147,33 +158,3 @@ function clearButtonClasses() {
     filterbuttons = document.querySelectorAll("button");
     filterbuttons.forEach(button => button.className = "");
 }
-
-
-
-// const getProphets = async (filter = "all") => {
-//     let prophets = await jsonFetch(url);
-
-//     switch (filter) {
-//         case "idaho":
-//             prophets = prophets.filter((prophet) => prophet.birthplace === "Idaho");
-//             break;
-//         case "nonus":
-//             prophets = prophets.filter((prophet) => prophet.birthplace === "England");
-//             break;
-//         case "ten":
-//             prophets = prophets.filter((prophet) => prophet.length >= 15);
-//             break;
-//         case "childs":
-//             prophets = prophets.filter((prophet) => prophet.numofchildren < 5);
-//             break;
-//         case "childl":
-//             prophets = prophets.filter((prophet) => prophet.numofchildren >= 10);
-//             break;
-//         case "old":
-//             prophets = prophets.filter(
-//                 (prophet) => getAgeAtDeathInYears(prophet.birthdate, prophet.death) >= 95
-//             );
-//             break;
-//         default:
-//             break;
-//     }
