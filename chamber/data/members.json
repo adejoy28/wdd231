@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Tech Innovators Inc.",
+        "address": "1234 Innovation Drive, Tech City, TX 75001",
+        "phone": "555-123-4567",
+        "website": "http://www.techinnovators.com",
+        "icon": "tech_innovators.png",
+        "membership_level": 3,
+        "description": "Leading the way in tech innovation and development."
+    },
+    {
+        "name": "Green Energy Solutions",
+        "address": "5678 Eco Lane, Green Town, CA 90210",
+        "phone": "555-234-5678",
+        "website": "http://www.greenenergysolutions.com",
+        "icon": "green_energy.png",
+        "membership_level": 2,
+        "description": "Providing sustainable energy solutions for a better future."
+    },
+    {
+        "name": "Healthy Living Co.",
+        "address": "910 Wellness Blvd, Health City, FL 33101",
+        "phone": "555-345-6789",
+        "website": "http://www.healthyliving.com",
+        "icon": "healthy_living.png",
+        "membership_level": 1,
+        "description": "Promoting healthy living through natural products."
+    },
+    {
+        "name": "EduTech Services",
+        "address": "1112 Learning Ave, Knowledge Town, NY 10001",
+        "phone": "555-456-7890",
+        "website": "http://www.edutechservices.com",
+        "icon": "edutech.png",
+        "membership_level": 3,
+        "description": "Innovative educational technology solutions."
+    },
+    {
+        "name": "Urban Developers LLC",
+        "address": "1314 Cityscape St, Urban City, IL 60601",
+        "phone": "555-567-8901",
+        "website": "http://www.urbandevelopers.com",
+        "icon": "urban_developers.png",
+        "membership_level": 2,
+        "description": "Building the cities of tomorrow."
+    },
+    {
+        "name": "FinTech Solutions",
+        "address": "1516 Finance Rd, Money Town, NJ 07001",
+        "phone": "555-678-9012",
+        "website": "http://www.fintechsolutions.com",
+        "icon": "fintech.png",
+        "membership_level": 3,
+        "description": "Revolutionizing financial technology."
+    },
+    {
+        "name": "Creative Media Agency",
+        "address": "1718 Art Blvd, Creative City, CA 90211",
+        "phone": "555-789-0123",
+        "website": "http://www.creativemedia.com",
+        "icon": "creative_media.png",
+        "membership_level": 1,
+        "description": "Bringing creativity to media and advertising."
+    }
+]

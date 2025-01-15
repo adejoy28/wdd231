@@ -41,20 +41,20 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 
-        <script src="scripts/scripts.js" defer></script>
+        <script src="scripts/script.js" defer></script>
         <script src="scripts/getdates.js" defer></script>
         <!-- <script src="scripts/test.js" defer></script> -->
     </head>
 
     <body>
         <header>
-            <img src="images/logo.png" alt="Chamber of Commerce Logo">
             <div class="site-title">
+                <img src="images/logo.svg" alt="Chamber of Commerce Logo">
                 <h1>Timbuktu</h1>
                 <p>Chamber of Commerce</p>
             </div>
-            <button class="hamburger-btn"></button>
-            <nav>
+            <button id="hamburger-btn" class="hamburger-btn"></button>
+            <nav id="animate-me" class="show">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Business Directory</a></li>
@@ -66,7 +66,7 @@
                     <li><a href="#">Event</a></li> -->
                 </ul>
             </nav>
-            <p>🌓</p>
+            <p class="theme">&#9775</p>
         </header>
         <main>
             <div id="cards"></div>
