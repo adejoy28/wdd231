@@ -10,11 +10,13 @@
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: #fff;
+    /* var(--background-color);*/
     color: var(--text-color);
     font-family: var(--body-font);
     margin: 0;
     padding: 0;
+    font-size: 12px;
 }
 
 header {
@@ -23,12 +25,11 @@ header {
     padding: .4rem 0 0;
     font-family: var(--header-font);
     display: grid;
-    grid-template-columns: 70% 1fr 1fr;
+    grid-template-columns: 1fr 50px 50px;
     grid-template-areas: "logo theme button"
         "nav nav nav";
     justify-content: center;
     align-items: center;
-
 }
 
 header .site-title {
@@ -72,6 +73,7 @@ header .hamburger-btn {
     color: white;
     grid-area: button;
     justify-self: end;
+    /* border: 1px solid white; */
 }
 
 header .hamburger-btn::before {
@@ -86,8 +88,9 @@ header .hamburger-btn:hover {
 header .theme {
     font-size: 1.5rem;
     justify-self: end;
-    padding: 0;
+    padding: .3rem .4rem;
     margin: 0;
+
 }
 
 /* header {
@@ -145,23 +148,157 @@ main {
     padding: 20px;
 }
 
-h1,
-h2,
-h3 {
-    color: var(--primary-color);
-    font-family: var(--header-font);
+main .grid-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-p {
-    line-height: 1.6;
+main .grid-list-container .btn {
+    margin: 0 .4rem;
+    /* padding: .5rem; */
+    border: 0;
+    background-color: transparent;
+    cursor: pointers;
+}
+
+#cards.grid {
+    /* max-width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    /* grid-template-columns: 1fr;/ */
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    /* border: .5px solid var(--primary-color); */
+    text-align: center;
+    /* width: 100%; */
+    padding: .5rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    align-items: stretch;
+}
+
+
+.list .card {
+    display: flex;
+    flex-wrap: nowrap;
+    /* overflow-x: auto; */
+    border-bottom: none;
+    align-items: stretch;
+    /* min-width: fit-content; */
+}
+
+.list .card:last-of-type {
+    /* border-bottom: 1px solid var(--primary-color); */
+}
+
+.list .card:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.list .card .name {
+    /* align-self: auto; */
+    flex-wrap: nowrap;
+    min-width: 120px;
+    text-align: left;
+    display: block;
+}
+
+.list .card .addr {
+    flex-wrap: nowrap;
+    border: 1px solid red;
+    /* display: block; */
+    min-width: 250px;
+    /* max-width: 260px; */
+    width: 100%;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.list .card .phone {
+    min-width: 100px;
+}
+
+.list .card .website {
+    cursor: pointer;
+    min-width: 250px;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+
+.list .card p,
+.list .card a {
+    /* width: 100%; */
+    /* display: block; */
+    margin: 0;
+    text-decoration: none;
+}
+
+/* .list .card .name::after,
+.list .card .phone::after,
+.list .card .addr::after {
+    content: " | ";
+    margin-right: 10px;
+} */
+
+.list .card .phone,
+.list .card .website,
+.list .card .addr {
+    /* display: block; */
+    /* text-align: left; */
+    /* min-width: fit-content; */
+}
+
+
+/* 
+.list .card.open .description,
+.list .card.open .addr,
+.list .card.open .phone,
+.list .card.open img {
+    display: none;
+}
+
+
+.list .card .addr,
+.list .card .phone,*/
+.list .card .description,
+.list .card img {
+    display: none;
 }
 
 footer {
     background-color: var(--primary-color);
     color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 0 1rem;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+}
+
+footer .socials {
+    align-self: flex-start;
+    display: flex;
+    align-items: end;
+    margin: 20px 0;
+    /* border: 1px solid white; */
+}
+
+footer .socials img {
+    /* border: 1px solid white; */
+    /* font-size: 1rem; */
+    padding: 0 20px;
+    cursor: pointer;
+
+}
+
+footer .author-details {
+    border: 0;
 }

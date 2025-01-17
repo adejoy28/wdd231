@@ -13,7 +13,7 @@
 
         <!--  Essential META Tags -->
         <meta property="og:title" content="Chamber of Commerce">
-        <meta property="og:type" content="This displays members directory" />
+        <meta property="og:type" content="This displays members directory">
         <meta property="og:image" content="images/favicon.ico">
         <meta property="og:url" content="adejoy28.github.io/wdd231/chamber/directory.html">
         <meta name="twitter:card" content="summary_large_image">
@@ -24,19 +24,24 @@
         <meta name="twitter:image:alt" content="Alt text for image">
 
         <!--  Non-Essential, But Required for Analytics -->
-        <meta property="fb:app_id" content="your_app_id" />
+        <meta property="fb:app_id" content="your_app_id">
         <meta name="twitter:site" content="@website-username">
 
         <!-- Social Sharing ends -->
 
 
-        <link rel="icon" href="images/favicon.ico**__">
+        <link rel="icon" href="images/favicon.svg">
 
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-medium.css">
         <link rel="stylesheet" href="styles/styles-large.css">
 
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+
+
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
@@ -66,12 +71,46 @@
                     <li><a href="#">Event</a></li> -->
                 </ul>
             </nav>
-            <p class="theme">&#9775</p>
+            <p class="theme">&#9775;</p>
         </header>
         <main>
-            <div id="cards"></div>
+            <div class="grid-list-container" id="grid-list-container">
+
+                <button type="button" id="grid-btn" class="btn grid"><img src="images/font-awesome/th-solid.svg"
+                        alt="grid" width="40" height="40"></button>
+                <button type="button" id="list-btn" class="btn list"><img src="images/font-awesome/list-solid.svg"
+                        alt="list-btn" width="40" height="40"></button>
+            </div>
+            <div id="cards" class="grid">
+                <!-- <section class ="grid">
+                    <p class="name">Tech Innovators Inc.</p>
+                    <img src="./images/members/logoipsum-288.svg" alt="Tech Innovators Inc.">
+                    <p class="addr">1234 Innovation Drive, Tech City, TX 75001</p>
+                    <p class="phone">555-123-4567</p>
+                    <p class="description">Leading the way in tech innovation and development.</p>
+                </section> -->
+            </div>
         </main>
         <footer>
-            <p>&copy; <span id="Year"></span> John Adebayo | Chamber of Commerce</p>
-            <p class="lstMod">{Last Modification: <span id="lastModified"></span>}</p>
+            <div class="site-details">
+                <p>Timbuktu Chamber of Commerce</p>
+                <p>10 Rue De la Paix</p>
+                <p>Timbuktu, Mail 000</p>
+                <p>info@Timbuktucc.org</p>
+                <p>(223) 555-2300</p>
+            </div>
+            <div class="socials">
+                <img src="images/font-awesome/youtube-brands-solid.svg" alt="youtube" width="40" height="40">
+                <img src="images/font-awesome/twitter-brands-solid.svg" alt="twitter" width="40" height="40">
+                <img src="images/font-awesome/linkedin-brands-solid.svg" alt="linkedin" width="40" height="40">
+            </div>
+            <div class="author-details">
+                <p>WDD231 Class Project</p>
+                <p>John Adebayo</p>
+                <p>&copy; <span id="Year"></span>Chamber of Commerce</p>
+                <p class="lstMod">{Last Modification: <span id="lastModified"></span>}</p>
+            </div>
         </footer>
+    </body>
+
+</html>

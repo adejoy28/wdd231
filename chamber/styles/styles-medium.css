@@ -1,7 +1,18 @@
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 500px) {
+    div#cards {
+        /* display: grid; */
+        /* grid-template-columns: repeat(auto-fit, 200px); */
+        /* justify-content: center;
+        align-items: stretch;
+        gap: 10px; */
+    }
 
-    /* Styles */
-    body {
-        font-size: 16px;
+    .list {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .card {
+        /* margin: 0 20px; */
     }
 }

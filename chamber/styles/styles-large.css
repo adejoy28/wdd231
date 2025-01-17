@@ -1,0 +1,44 @@
+@media screen and (min-width: 768px) {
+    header {
+        grid-template-columns: 200px 1fr 40px;
+        grid-template-areas: "logo nav theme";
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .hamburger-btn {
+        display: none;
+    }
+
+    header nav.show {
+        display: block;
+    }
+
+    header nav.show ul {
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    header .theme {
+        padding: 1rem;
+
+    }
+
+
+    footer {
+        /* padding: 10px; */
+        /* max-width: 100%; */
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    footer .socials {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
