@@ -8,11 +8,69 @@
     }
 
     .list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         max-width: 1000px;
+        width: 100%;
         margin: 0 auto;
+        overflow: hidden;
     }
 
-    .card {
-        /* margin: 0 20px; */
+    .list .card {
+        display: grid;
+        grid-template-columns: 1fr 2fr .8fr 1fr ;
     }
+
+    .list .card .name {
+        /* align-self: auto; */
+        /* flex-wrap: nowrap; */
+        min-width: 120px;
+        text-align: left;
+        display: block;
+    }
+
+    .list .card .details {
+        display: none;
+    }
+
+    .list .card .addr {
+        /* flex-wrap: nowrap; */
+        /* border: 1px solid red; */
+        display: block;
+        /* min-width: 150px; */
+        /* max-width: 260px; */
+        width: 100%;
+        text-align: left;
+        /* align-self: flex-start; */
+    }
+
+    .list .card .phone {
+        min-width: 100px;
+        display: block;
+    }
+
+    .list .card .website {
+        display: block;
+        cursor: pointer;
+        min-width: 100px;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* border: 1px solid red; */
+    }
+
+    .list .card .website a {
+        /* text-overflow: ellipsis; */
+        -o-text-overflow: ellipsis;
+    }
+
+    .list .card p,
+    .list .card a {
+        /* width: 100%; */
+        /* display: block; */
+        margin: 0;
+        text-decoration: none;
+    }
+
 }

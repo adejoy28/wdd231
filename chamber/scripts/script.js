@@ -50,6 +50,7 @@ const createSection = (item) => {
     <span class="addr"><p>${item.address}</p></span>
     <span class="phone"><p>${item.phone}</p></span>
     <span class="website"><a href="${item.website}">${item.website}</a></span>
+    <span class="details"><a href="${item.website}">Details</a></span>
     </section>`;
     return section;
 }

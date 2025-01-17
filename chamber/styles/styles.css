@@ -22,6 +22,9 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
+}
+
+header .container {
     padding: .4rem 0 0;
     font-family: var(--header-font);
     display: grid;
@@ -30,6 +33,8 @@ header {
         "nav nav nav";
     justify-content: center;
     align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 header .site-title {
@@ -93,36 +98,28 @@ header .theme {
 
 }
 
-/* header {
-    display: none;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 1.5s ease-out;
-} */
-
-
 header nav.show {
     grid-area: nav;
     display: grid;
-    grid-template-columns: 0fr;
-    max-height: fit-content;
+    grid-template-columns: 1fr;
 }
 
 header nav.show ul {
-    overflow: hidden;
-    background-color: var(--secondary-color);
-    display: flex;
+    /* background-color: var(--secondary-color); */
+    /* display: flex;
     flex-direction: column;
     padding: 0;
-    margin: 0;
+    margin: 0; */
+    overflow: hidden !important;
 }
 
 header nav.show.open {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
 }
 
 header nav.show ul li {
     list-style: none;
+    /* display: none; */
 }
 
 header nav.show ul li a {
@@ -130,8 +127,8 @@ header nav.show ul li a {
     display: block;
     padding: .8rem;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 header nav.show ul li a:hover,
@@ -139,10 +136,10 @@ header nav.show ul li a:active {
     background-color: var(--secondary-color-lite);
 }
 
-header nav.hide {
-    max-height: 1000px;
+/* header nav.hide { */
+    /* max-height: 1000px; */
     /* overflow: auto; */
-}
+/* } */
 
 main {
     padding: 20px;
@@ -156,10 +153,11 @@ main .grid-list-container {
 
 main .grid-list-container .btn {
     margin: 0 .4rem;
-    /* padding: .5rem; */
+    padding: .5rem;
     border: 0;
     background-color: transparent;
-    cursor: pointers;
+    cursor: pointer;
+    width: max-content;
 }
 
 #cards.grid {
@@ -176,6 +174,10 @@ main .grid-list-container .btn {
     text-align: center;
     /* width: 100%; */
     padding: .5rem;
+}
+
+.details {
+    display: none;
 }
 
 .list {
@@ -206,16 +208,23 @@ main .grid-list-container .btn {
 .list .card .name {
     /* align-self: auto; */
     flex-wrap: nowrap;
-    min-width: 120px;
+    min-width: 220px;
     text-align: left;
     display: block;
 }
 
+.list .card .details {
+    display: block;
+    width: 100%;
+    text-align: right;
+    align-self: flex-start;
+}
+
 .list .card .addr {
     flex-wrap: nowrap;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* display: block; */
-    min-width: 250px;
+    min-width: 150px;
     /* max-width: 260px; */
     width: 100%;
     text-align: left;
@@ -241,34 +250,9 @@ main .grid-list-container .btn {
     text-decoration: none;
 }
 
-/* .list .card .name::after,
-.list .card .phone::after,
-.list .card .addr::after {
-    content: " | ";
-    margin-right: 10px;
-} */
-
+.list .card .addr,
 .list .card .phone,
 .list .card .website,
-.list .card .addr {
-    /* display: block; */
-    /* text-align: left; */
-    /* min-width: fit-content; */
-}
-
-
-/* 
-.list .card.open .description,
-.list .card.open .addr,
-.list .card.open .phone,
-.list .card.open img {
-    display: none;
-}
-
-
-.list .card .addr,
-.list .card .phone,*/
-.list .card .description,
 .list .card img {
     display: none;
 }
@@ -276,29 +260,29 @@ main .grid-list-container .btn {
 footer {
     background-color: var(--primary-color);
     color: white;
+}
+
+footer .footer-container {
     padding: 0 1rem;
-    /* width: 100%; */
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
     font-size: .7rem;
+    justify-content: space-between;
 }
 
 footer .socials {
-    align-self: flex-start;
     display: flex;
-    align-items: end;
-    margin: 20px 0;
-    /* border: 1px solid white; */
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 30px 0;
 }
 
 footer .socials img {
-    /* border: 1px solid white; */
-    /* font-size: 1rem; */
-    padding: 0 20px;
     cursor: pointer;
-
 }
 
 footer .author-details {
     border: 0;
+    padding: 10px 0;
 }
