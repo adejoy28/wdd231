@@ -1,67 +1,67 @@
 {
     "members": [
         {
-            "name": "Tech Innovators Inc.",
-            "address": "1234 Innovation Drive, Tech City, TX 75001",
-            "phone": "555-123-4567",
-            "website": "http://www.techinnovators.com",
-            "icon": "./images/members/logoipsum-288.svg",
+            "name": "Parkinn by Radisson Hotel",
+            "address": "1 ibrahim Babangida Boulevard, Kuto, Abeokuta 110282",
+            "phone": "(201) 4662 380",
+            "website": "https://www.parkinn.com/hotel-abeokuta",
+            "icon": "./images/members/parkinn.svg",
             "membership_level": 3,
-            "description": "Leading the way in tech innovation and development."
+            "description": "Explore the flourishing town of Abeokuta, Nigeria from the Park Inn by Radisson Abeokuta. Our convenient city center hotel is located in the Kuto area, near several government offices and a number of transport options, including taxi and bus services. Murtala Muhammed International Airport (LOS) is 92 kilometers from the hotel."
         },
         {
-            "name": "Green Energy Solutions",
-            "address": "5678 Eco Lane, Green Town, CA 90210",
-            "phone": "555-234-5678",
-            "website": "http://www.greenenergysolutions.com",
-            "icon": "./images/members/logoipsum-287.svg",
+            "name": "Lafarge",
+            "address": "1, Adigbe Road Abeokuta, Ogun.",
+            "phone": "(808) 313 4506",
+            "website": "https://www.lafarge.com.ng",
+            "icon": "./images/members/lafarge.svg",
             "membership_level": 2,
-            "description": "Providing sustainable energy solutions for a better future."
+            "description": "As a leading producer of building materials and construction solutions, we strive to provide products that are innovative and offer high added value. For us, innovation is a crucial part of our operations and we have made significant investments in research and development.Lafarge is home to a number of formidable brands with impeccable standard and quality that has served the Nigerian market for decades with power, maturity, resilience, durability and reliability. Designed using the best technology, our products are designed for projects that have and will continue to stand the test of time"
         },
         {
-            "name": "Healthy Living Co.",
-            "address": "910 Wellness Blvd, Health City, FL 33101",
-            "phone": "555-345-6789",
-            "website": "http://www.healthyliving.com",
-            "icon": "./images/members/logoipsum-285.svg",
+            "name": "Apex Paints",
+            "address": "8, Abeokuta-Lagos Road Abeokuta, Ogun.",
+            "phone": "(709) 318 0128",
+            "website": "https://www.apexpaints.com",
+            "icon": "./images/members/apex.svg",
             "membership_level": 1,
-            "description": "Promoting healthy living through natural products."
+            "description": "Apex Paints Limited commenced operations in 1979.  The head office is at Km 8, Abeokuta-Lagos Express Road, with a distance of about 87km to Lagos. It has its subsidiaries in some states like, Lagos and Ibadan. "
         },
         {
-            "name": "EduTech Services",
-            "address": "1112 Learning Ave, Knowledge Town, NY 10001",
+            "name": "Sygen",
+            "address": "1112 Learning Ave, Abeokuta, Nigeria",
             "phone": "555-456-7890",
-            "website": "http://www.edutechservices.com",
-            "icon": "./images/members/logoipsum-297.svg",
+            "website": "http:/sygenpharma.com",
+            "icon": "./images/members/sygen.svg",
             "membership_level": 3,
-            "description": "Innovative educational technology solutions."
+            "description": "Sygen Pharmaceutical Ltd (Sygen Pharma) is an innovative branded generics life sciences organisation that was established in March 2019. Sygen Pharma subsequently acquired the assets of Nigerian German Chemicals Plc (NGC); a company that had operated in Nigeria for almost 60 years and has a range of legacy brands with strong residual equity in its product portfolio."
         },
         {
-            "name": "Urban Developers LLC",
-            "address": "1314 Cityscape St, Urban City, IL 60601",
-            "phone": "555-567-8901",
-            "website": "http://www.urbandevelopers.com",
-            "icon": "./images/members/logoipsum-330.svg",
+            "name": "Blue Spectra Ad Company",
+            "address": "125, Olusegun Osoba Way, Oke Ilewo, Abeokuta, Ogun State.",
+            "phone": "08097222629",
+            "website": "https://www.bluespectra.com/",
+            "icon": "./images/members/bluespectra.png",
             "membership_level": 2,
-            "description": "Building the cities of tomorrow."
+            "description": "Bluespectra is a full-service Technology Solution Provider and Consulting company operating from the city of Abeokuta, Ogun State Nigeria; Serving clients across the globe with experience spanning diverse fields of commerce, retail, agriculture, health, and education. Today we’re proud to boast a strong team of IT engineers who thrive on rolling up their sleeves and solving your IT problems and meeting your business need"
         },
         {
-            "name": "FinTech Solutions",
-            "address": "1516 Finance Rd, Money Town, NJ 07001",
-            "phone": "555-678-9012",
-            "website": "http://www.fintechsolutions.com",
-            "icon": "./images/members/logoipsum-349.svg",
+            "name": "Dangote Industries Limited",
+            "address": "Leadway Marble House 1 Alfred Rewane Road, PMB 40032, Falomo Ikoyi, Lagos, Nigeria",
+            "phone": "(234) 1 463 0316",
+            "website": "https://dangote.com/",
+            "icon": "./images/members/dangote.svg",
             "membership_level": 3,
-            "description": "Revolutionizing financial technology."
+            "description": "Dangote Group continues to grow its focus of becoming the leading provider of essential needs in Food and Shelter in Sub-Saharan Africa. Our vision is to be a world-class enterprise that is passionate about the quality of life of the general populace and high returns to stakeholders. Our mission is to touch the lives of people by providing their basic needs. We continue to sustain and improve on our market leadership in Cement Manufacturing, Sugar Milling, Sugar Refining, Port Operations, Packaging Material Production and Salt Refining."
         },
         {
-            "name": "Creative Media Agency",
-            "address": "1718 Art Blvd, Creative City, CA 90211",
-            "phone": "555-789-0123",
-            "website": "http://www.creativemedia.com",
-            "icon": "./images/members/logoipsum-321.svg",
+            "name": "Geepee Industries Limited",
+            "address": "KM38, Abeokuta Motor Road, Sango Ota, Ogun, Nigeria",
+            "phone": "(815) 349 2853",
+            "website": "https://geepee.com/",
+            "icon": "./images/members/geepee.svg",
             "membership_level": 1,
-            "description": "Bringing creativity to media and advertising."
+            "description": "Geepee Tanks is Nigeria’s largest manufacturer of plastic tanks for over four decades. We have the most comprehensive range of storage tanks from 300 ltrs to 30,000 ltrs."
         }
     ]
 }

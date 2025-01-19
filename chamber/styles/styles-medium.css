@@ -19,18 +19,18 @@
 
     .list .card {
         display: grid;
-        grid-template-columns: 1fr 2fr .8fr 1fr ;
+        grid-template-columns: 1fr 2fr .8fr 1fr;
     }
 
+
     .list .card .name {
-        /* align-self: auto; */
-        /* flex-wrap: nowrap; */
         min-width: 120px;
         text-align: left;
         display: block;
     }
 
-    .list .card .details {
+    .list .card .details,
+    .list .card .member-img {
         display: none;
     }
 
@@ -61,7 +61,7 @@
     }
 
     .list .card .website a {
-        /* text-overflow: ellipsis; */
+        text-overflow: ellipsis;
         -o-text-overflow: ellipsis;
     }
 

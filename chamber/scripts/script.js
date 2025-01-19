@@ -3,6 +3,7 @@ const nav = document.querySelector('#animate-me');
 
 hamBtn.addEventListener('click', () => {
     nav.classList.toggle('open');
+    hamBtn.classList.toggle('open');
 });
 
 const url = "./data/members.json";
@@ -45,15 +46,18 @@ const displayMembersData = async (data) => {
 
 const createSection = (item) => {
     const section = `<section class="card" id="card">
-    <span class="name">${item.name}</p></span>
-    <img src="${item.icon}" alt="${item.name}">
-    <span class="addr"><p>${item.address}</p></span>
-    <span class="phone"><p>${item.phone}</p></span>
-    <span class="website"><a href="${item.website}">${item.website}</a></span>
-    <span class="details"><a href="${item.website}">Details</a></span>
+    <div class="name"><p>${item.name}</p></div>
+    <div class="member-img">
+        <img src="${item.icon}" alt="${item.name}"> 
+    </div>
+    <div class="addr"><p>${item.address}</p></div>
+    <div class="phone"><p>${item.phone}</p></div>
+    <div class="website"><a href="${item.website}">${item.website}</a></div>
+    <div class="details"><a href="${item.website}">Details</a></div>
     </section>`;
     return section;
 }
+
 /*
 const createSection = (item) => {
    const section = document.createElement("section");

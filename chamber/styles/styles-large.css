@@ -12,10 +12,10 @@
 
     header nav.show {
         display: block;
+        background-color: transparent;
     }
 
     header nav.show ul {
-        background-color: transparent;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
