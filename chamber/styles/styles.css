@@ -7,9 +7,10 @@
     --accent-color-2: #813640;
     --accent-color-3: #191D2B;
     --accent-color-4: #D8D8D8;
-    --background-color: #DAA12E;
+    --background-color: #ca9428;
     --text-color: #2c3e50;
-    --card-dark-color: var(--accent-color) --header-font: 'Lato', sans-serif;
+    --card-dark-color: var(--accent-color);
+    --header-font: 'Lato', sans-serif;
     --body-font: 'Verdana', sans-serif;
 }
 
@@ -156,7 +157,7 @@ header nav.show ul li a {
 }
 
 header nav.show ul li a:hover,
-header nav.show ul li a:active {
+header nav.show ul li a.active {
     background-color: var(--secondary-color-lite);
 }
 
@@ -190,27 +191,36 @@ main .grid-list-container .btn {
     width: max-content;
 }
 
+main .grid-list-container .btn:hover,
+main .grid-list-container .btn.active {
+    border: 1px solid var(--accent-color-3);
+}
+
 #cards {
     padding: 1rem 0;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 #cards.grid {
     /* max-width: 100%; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fit, 250px);
     justify-content: center;
     gap: 20px;
 }
 
 .grid .card {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color-4);
     /* border: .5px solid var(--primary-color); */
     text-align: center;
     /* width: 100%; */
     padding: .5rem;
     border: 1px solid var(--accent-color);
     border-radius: 3px;
-    grid-auto-rows: 1fr
+    grid-auto-rows: minmax(60px, 65px);
+    position: relative;
+    display: grid;
 }
 
 .grid .card:hover {
@@ -244,11 +254,8 @@ main .grid-list-container .btn {
 }
 
 .grid .card div {
-    width: 92%;
-    /* border: 1px saddlebrown solid; */
-    /* overflow: hidden; */
-    margin: .5rem auto;
-    word-wrap: break-word;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .grid .card div p,
@@ -256,6 +263,23 @@ main .grid-list-container .btn {
     width: 100%;
     display: block;
 }
+
+.grid .card .website a {
+    background-color: var(--accent-color-3);
+    color: #D8D8D8;
+    padding: 1rem;
+    /* position: absolute; */
+    bottom: .5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.grid .card .website a:hover {
+    background-color: var(--accent-color-4);
+    border: 1px solid var(--accent-color-3);
+    color: var(--accent-color-3);
+}
+
 
 .details {
     display: none;
@@ -275,6 +299,7 @@ main .grid-list-container .btn {
     border-bottom: none;
     align-items: stretch;
     /* min-width: fit-content; */
+    background-color: var(--accent-color-4);
 }
 
 .list .card div {
@@ -282,7 +307,7 @@ main .grid-list-container .btn {
 }
 
 .list .card:nth-child(odd) {
-    background-color: #f3f3f3;
+    background-color: var(--accent-color-1);
 }
 
 .list .card .name {
@@ -317,10 +342,12 @@ main .grid-list-container .btn {
 
 .list .card .website {
     cursor: pointer;
-    min-width: 250px;
-    text-align: left;
+    /* min-width: 250px; */
+    /* text-align: left; */
     /* border: 1px solid red; */
 }
+
+.list .card .website a {}
 
 .list .card p,
 .list .card a {
@@ -345,7 +372,7 @@ footer {
 }
 
 footer .footer-container {
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
     font-size: .7rem;
@@ -367,4 +394,8 @@ footer .socials img {
 footer .author-details {
     border: 0;
     padding: 10px 0;
+}
+
+footer .author-details .lstMod {
+    color: var(--background-color);
 }

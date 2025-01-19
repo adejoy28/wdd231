@@ -39,8 +39,6 @@ const displayMembersData = async (data) => {
         // createSection(item);
         cards.innerHTML += createSection(item);
     });
-
-    console.log(cards);
 }
 
 
@@ -52,7 +50,7 @@ const createSection = (item) => {
     </div>
     <div class="addr"><p>${item.address}</p></div>
     <div class="phone"><p>${item.phone}</p></div>
-    <div class="website"><a href="${item.website}">${item.website}</a></div>
+    <div class="website"><a href="${item.website}">Visit Website</a></div>
     <div class="details"><a href="${item.website}">Details</a></div>
     </section>`;
     return section;
@@ -102,9 +100,24 @@ const listBtn = document.querySelector("#list-btn");
 gridBtn.addEventListener('click', () => {
     cards.classList.remove('list');
     cards.classList.add('grid');
+    gridBtn.classList.add('active')
+    listBtn.classList.remove('active')
 })
 listBtn.addEventListener('click', () => {
     cards.classList.remove('grid');
     cards.classList.add('list');
+    listBtn.classList.add('active')
+    gridBtn.classList.remove('active')
     // alert('clicked list');
 })
+
+
+// WORK LATER ON DYNAMICALLY ADDING ACTIVE TO NAV LINKS
+
+// const navLinks = document.querySelectorAll('li');
+
+// // console.log(navLinks);
+
+// navLinks.forEach(link => {
+//     console.log(link);
+// })

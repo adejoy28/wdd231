@@ -1,12 +1,4 @@
 @media screen and (min-width: 500px) {
-    div#cards {
-        /* display: grid; */
-        /* grid-template-columns: repeat(auto-fit, 200px); */
-        /* justify-content: center;
-        align-items: stretch;
-        gap: 10px; */
-    }
-
     .list {
         display: grid;
         grid-template-columns: 1fr;
@@ -35,14 +27,9 @@
     }
 
     .list .card .addr {
-        /* flex-wrap: nowrap; */
-        /* border: 1px solid red; */
         display: block;
-        /* min-width: 150px; */
-        /* max-width: 260px; */
         width: 100%;
         text-align: left;
-        /* align-self: flex-start; */
     }
 
     .list .card .phone {
