@@ -164,6 +164,12 @@ main {
     padding: 20px;
 }
 
+main h1 {
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+
 main .grid-list-container {
     display: flex;
     justify-content: center;
@@ -180,7 +186,7 @@ main .grid-list-container .btn {
 }
 
 #cards {
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 
 #cards.grid {
