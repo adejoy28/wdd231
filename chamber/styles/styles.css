@@ -4,15 +4,13 @@
     --secondary-color-lite: #4c637a;
     --accent-color: #FFEAD6;
     --accent-color-1: #bccac1;
+    --accent-color-2: #813640;
+    --accent-color-3: #191D2B;
+    --accent-color-4: #D8D8D8;
     --background-color: #DAA12E;
     --text-color: #2c3e50;
     --card-dark-color: var(--accent-color) --header-font: 'Lato', sans-serif;
     --body-font: 'Verdana', sans-serif;
-    #;
-    #D8D8D8;
-    #813640;
-    #;
-    #191D2B;
 }
 
 * {
