@@ -113,11 +113,22 @@ header .site-title h1:hover {
 }
 
 header .theme {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     justify-self: end;
     padding: .3rem .4rem;
     margin: 0;
+    border: none;
+    cursor: pointer;
+    transition: all .4s ease;
+    /* color: #813640; */
+}
 
+header .theme:hover {
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--accent-color-1);
+    padding: .2rem .3rem;
+    border: 1px solid var(--accent-color-1);
 }
 
 header nav.show {

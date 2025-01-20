@@ -119,5 +119,5 @@ listBtn.addEventListener('click', () => {
 // // console.log(navLinks);
 
 // navLinks.forEach(link => {
-//     console.log(link);
+//     console.log(link.currentTarget);
 // })

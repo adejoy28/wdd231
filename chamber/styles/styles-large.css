@@ -4,6 +4,7 @@
         grid-template-areas: "logo nav theme";
         justify-content: center;
         align-items: center;
+        padding-right: 1rem;
     }
 
     header .hamburger-btn {
@@ -22,7 +23,7 @@
     }
 
     header .theme {
-        padding: 1rem;
+        padding: .5rem;
 
     }
 
