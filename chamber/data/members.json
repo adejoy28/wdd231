@@ -61,6 +61,13 @@
             "website": "https://geepee.com/",
             "icon": "./images/members/geepee.svg",
             "membership_level": 1,
+            "array": [
+                1,
+                1,
+                3,
+                4,
+                5
+            ],
             "description": "Geepee Tanks is Nigeria’s largest manufacturer of plastic tanks for over four decades. We have the most comprehensive range of storage tanks from 300 ltrs to 30,000 ltrs."
         }
     ]

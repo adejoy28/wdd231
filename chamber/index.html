@@ -38,6 +38,7 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-medium.css">
         <link rel="stylesheet" href="styles/styles-large.css">
+        <link rel="stylesheet" href="styles/index.css">
 
         <!-- Font awesome -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"> -->
@@ -48,9 +49,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
 
-        <script src="scripts/script.js" defer></script>
-        <script src="scripts/getdates.js" defer></script>
-        <!-- <script src="scripts/test.js" defer></script> -->
+        <script src="scripts/script.js" defer type="module"></script>
+        <script src="scripts/index.js" defer type="module"></script>
     </head>
 
     <body>
@@ -79,26 +79,63 @@
             </div>
         </header>
         <main>
-            <h1>This is the landing page</h1>
+            <div class="hero-container" width="100vh" height="100vh">
+                <div class="hero-content">
+                    <h1>Leme Chamber of Commerce</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt pariatur nobis sequi quisquam
+                        repellendus at, in esse dicta totam fugiat facilis qui nisi praesentium corporis! Sed aspernatur
+                        consequuntur temporibus aperiam.</p>
+                    <button type="button" class="hero-btn">Join Now!</button>
+                </div>
+            </div>
+            <h1>Home</h1>
+            <div class="section1">
+                <div class="event-weather-container">
+                    <section class="event">
+                        <h2>Events</h2>
+                    </section>
+                    <section id="currWeather" class="curr-weather">
+                        <h2>Current Weather</h2>
+                        <!-- <div>
+                            <figure>
+                                <img src="" alt="" srcset="">
+                            </figure>
+                            <p class="temp">75<sup>o</sup>F</p>
+                            <p class="weatherInfo">Party Cloudy</p>
+                            <p class="high-temp">High: 85<sup>o</sup></p>
+                            <p class="low-temp">Low: <sup>o</sup></p>
+                            <p class="humidity">Humidity: 34%</p>
+                            <p class="sunrise">Sunrise:</p>
+                            <p class="sunset">Sunrise:</p>
+                        </div> -->
+                    </section>
+                    <section id="weatherForecast" class="weather-forecast">
+                        <h2>Weather Forecast</h2>
+                    </section>
+                </div>
+            </div>
         </main>
         <footer>
-            <div class="site-details">
-                <p>Timbuktu Chamber of Commerce</p>
-                <p>10 Rue De la Paix</p>
-                <p>Timbuktu, Mail 000</p>
-                <p>info@Timbuktucc.org</p>
-                <p>(223) 555-2300</p>
-            </div>
-            <div class="socials">
-                <img src="images/font-awesome/youtube-brands-solid.svg" alt="youtube" width="40" height="40">
-                <img src="images/font-awesome/twitter-brands-solid.svg" alt="twitter" width="40" height="40">
-                <img src="images/font-awesome/linkedin-brands-solid.svg" alt="linkedin" width="40" height="40">
-            </div>
-            <div class="author-details">
-                <p>WDD231 Class Project</p>
-                <p>John Adebayo</p>
-                <p>&copy; <span id="Year"></span>Chamber of Commerce</p>
-                <p class="lstMod">{Last Modification: <span id="lastModified"></span>}</p>
+            <div class="footer-container">
+                <div class="site-details">
+                    <p>Leme Chamber of Commerce</p>
+                    <p>10 Rue De la Paix</p>
+                    <p>Leme, Mail 000</p>
+                    <p>info@Lemecc.org</p>
+                    <p>(223) 555-2300</p>
+                </div>
+                <div class="socials">
+                    <img src="images/font-awesome/youtube-brands-solid.svg" alt="youtube" width="40" height="40">
+                    <img src="images/font-awesome/twitter-brands-solid.svg" alt="twitter" width="40" height="40">
+                    <img src="images/font-awesome/linkedin-brands-solid.svg" alt="linkedin" width="40" height="40">
+                </div>
+                <div class="author-details">
+                    <p>WDD231 Class Project</p>
+                    <p>John Adebayo</p>
+                    <p>&copy; <span id="Year"></span>Chamber of Commerce</p>
+                    <p class="lstMod">{Last Modification: <span id="lastModified"></span>}</p>
+                </div>
+
             </div>
         </footer>
     </body>

@@ -67,7 +67,7 @@ header .site-title img {
 
 header .site-title h1 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 2.5em;
     grid-area: logo;
     color: rgb(238, 238, 238);
     text-transform: uppercase;
@@ -137,6 +137,7 @@ header nav.show {
     grid-template-rows: 0fr;
     padding: 0;
     overflow: hidden;
+    /* visibility: hidden; */
     background-color: var(--secondary-color);
     transition: grid-template-rows .7s ease-out;
 }
@@ -165,21 +166,15 @@ header nav.show ul li a {
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
+    /* visibility: hidden; */
 }
 
 header nav.show ul li a:hover,
 header nav.show ul li a.active {
-    background-color: var(--secondary-color-lite);
+    border-bottom: 3px solid var(--background-color);
+    border-left: 3px solid var(--background-color);
 }
 
-/* header nav.hide { */
-/* max-height: 1000px; */
-/* overflow: auto; */
-/* } */
-
-main {
-    padding: 20px;
-}
 
 main h1 {
     margin: 0 auto;
@@ -222,7 +217,7 @@ main .grid-list-container .btn.active {
 }
 
 .grid .card {
-    background-color: var(--accent-color-4);
+    background-color: #fff;
     /* border: .5px solid var(--primary-color); */
     text-align: center;
     /* width: 100%; */
@@ -353,17 +348,10 @@ main .grid-list-container .btn.active {
 
 .list .card .website {
     cursor: pointer;
-    /* min-width: 250px; */
-    /* text-align: left; */
-    /* border: 1px solid red; */
 }
-
-.list .card .website a {}
 
 .list .card p,
 .list .card a {
-    /* width: 100%; */
-    /* display: block; */
     margin: 0;
     text-decoration: none;
 }

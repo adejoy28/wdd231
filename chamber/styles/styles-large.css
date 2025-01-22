@@ -22,6 +22,14 @@
         justify-content: flex-end;
     }
 
+
+    header nav.show ul li a.active,
+    header nav.show ul li a:hover {
+        border-left: none;
+        /*3px solid var(--background-color);
+        bor*/
+    }
+
     header .theme {
         padding: .5rem;
 

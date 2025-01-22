@@ -38,6 +38,7 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-medium.css">
         <link rel="stylesheet" href="styles/styles-large.css">
+        <link rel="stylesheet" href="styles/directory.css">
 
         <!-- Font awesome -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"> -->
@@ -48,8 +49,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
 
-        <script src="scripts/script.js" defer></script>
-        <script src="scripts/getdates.js" defer></script>
+        <script src="scripts/script.js" defer type="module"></script>
+        <script src="scripts/directory.js" type="module" defer></script>
+        <!-- <script src="scripts/getdates.js" defer></script> -->
         <!-- <script src="scripts/test.js" defer></script> -->
     </head>
 
@@ -62,7 +64,7 @@
                     <h1>Leme</h1>
                     <p>Chamber of Commerce</p>
                 </div>
-                <button id="hamburger-btn" class="hamburger-btn"></button>
+                <button id="hamburger-btn" class="hamburger-btn" aria-label="menu-button"></button>
                 <nav id="animate-me" class="show">
                     <ul class="menu-links">
                         <li><a href="index.html">Home</a></li>
@@ -86,7 +88,7 @@
                 <button type="button" id="grid-btn" class="btn grid"><img src="images/font-awesome/th-solid.svg"
                         alt="grid" width="30" height="30"></button>
                 <button type="button" id="list-btn" class="btn list"><img src="images/font-awesome/list-solid.svg"
-                        alt="list-btn" width="30" height="30"></button>
+                        alt="list-btn" width="35" height="30"></button>
             </div>
             <div id="cards" class="grid">
                 <!-- <section class ="grid">
@@ -97,6 +99,15 @@
                     <p class="description">Leading the way in tech innovation and development.</p>
                 </section> -->
             </div>
+            <!-- <div class="parent">
+                <p>Immediate child 1</p>
+                <p>Immediate child 2</p>
+                <div>
+                    <p>Nested child</p>
+                </div>
+            </div> -->
+            <!-- *** Call to Action *** -->
+            <aside class="cta">Join Now!</aside>
         </main>
         <footer>
             <div class="footer-container">
