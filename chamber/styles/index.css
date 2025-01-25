@@ -1,5 +1,5 @@
 .hero-container {
-    display: block;
+    /* display: none; */
     /* width: 100vw; */
     height: 90vh;
     border: 1px saddlebrown solid;
@@ -13,7 +13,7 @@
     content: '';
     width: 100%;
     height: 100%;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.1);
@@ -133,7 +133,7 @@
 
 .event-weather-container section div.curr-weather .high-temp {
     grid-area: high;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     padding-left: .7rem;
 }
 
@@ -162,13 +162,84 @@
 
 
 
+/* 
+
+        Section 2 Styles 
 
 
+*/
 
-
-h1 {
-    display: flex;
+.section2 {
+    background-color: var(--accent-color-4);
+    padding: 2rem 0;
 }
+
+.section2 .top-business-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px saddlebrown solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 .top-business-container .top-business {
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    /* grid-auto-rows: 300px; */
+    display: block;
+    overflow: hidden;
+    /* display: flex; */
+    /* color: aliceblue; */
+}
+
+.section2 .top-business-container .top-business h1 {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+}
+
+.section2 .top-business-container .top-business .biz-tagline {
+    text-align: center;
+    display: none;
+}
+
+.section2 .top-business-container .top-business .biz-details-container {
+    border-top: 1px solid black;
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+
+.section2 .top-business-container .top-business .biz-details-container img {
+    width: 100px;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    margin: 0 1rem;
+}
+
+.section2 .top-business-container .top-business .biz-details-container p:last-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    /* min-width: 30px; */
+    border: 1px solid red;
+    /* text-wrap: wrap; */
+}
+
+.section2 .top-business-container .top-business .biz-details-container p:last-of-type a {
+    /* max-width: ; */
+}
+
+/* 
+
+    Tablet Styles
+
+*/
 
 @media screen and (min-width: 600px) {
     .event-weather-container {
@@ -194,6 +265,13 @@ h1 {
         grid-area: forecast;
     }
 }
+
+
+/* 
+
+    Largest Desktop Styles
+
+*/
 
 @media screen and (min-width: 1000px) {
     .event-weather-container {

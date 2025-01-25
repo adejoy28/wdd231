@@ -84,5 +84,58 @@ function convertToLocaleZone(apiTimeZone, data) {
 
     return date.toLocaleTimeString();
 }
+
+const membersURL = "./data/members.json";
+
+async function FetchMembersAPI(url) {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (response.ok) {
+            console.log(data.members);
+
+            displayTopMembers(data.members)
+
+        } else {
+            throw Error("Error:" + response.text());
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const displayTopMembers = (data) => {
+    const div = document.querySelector("#topBusinessContainer");
+    let count = 0;
+    data.forEach(item => {
+        // while (count <= 2) {
+        if (item.membership_level >= 2) {
+            const section = `
+                                <section class="top-business">
+                                    <h1>${item.name} ${item.membership_level}</h1>
+                                    <p class="biz-tagline">Business Tag Line</p>
+                                    <div class="biz-details-container">
+                                    <img src="${item.icon}" alt="${item.description}">
+                                        <div class="biz-details-content">
+                                            <p><b>Email:</b> ${item.email}</p>
+                                            <p><b>Phone:</b> ${item.phone}</p>
+                                            <p><b>URL:</b> <a href="${item.website}">${item.website}</a></p>
+                                        </div>
+                                    </div>
+                                    </section>
+                                    `;
+            if (count <= 2) {
+                div.innerHTML += section;
+                count++;
+            }
+            console.log(section);
+        }
+        // }
+    });
+}
+
+
 apiFetch(url);
 displayForecastResult();
+FetchMembersAPI(membersURL);

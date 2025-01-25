@@ -1,3 +1,186 @@
-.parent ~ p {
-    color: blueviolet;
+main h1 {
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main .grid-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .grid-list-container .btn {
+    margin: 0 .4rem;
+    padding: .5rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    width: max-content;
+}
+
+main .grid-list-container .btn:hover,
+main .grid-list-container .btn.active {
+    border: 1px solid var(--accent-color-3);
+}
+
+#cards {
+    padding: 1rem 0;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#cards.grid {
+    /* max-width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: center;
+    gap: 20px;
+}
+
+.grid .card {
+    background-color: #fff;
+    /* border: .5px solid var(--primary-color); */
+    text-align: center;
+    /* width: 100%; */
+    padding: .5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    grid-auto-rows: minmax(60px, 65px);
+    position: relative;
+    display: grid;
+}
+
+.grid .card:hover {
+    border: 1px solid var(--secondary-color-lite);
+    box-shadow: 3px 3px 3px #2c3e50;
+
+}
+
+.grid .card .name {
+    font-weight: bold;
+}
+
+.grid .card .member-img {
+    width: 100px;
+    height: 75px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.grid .card .member-img img {
+    /* max-width: 95px; */
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+
+}
+
+.grid .card div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.grid .card div p,
+.grid .card div a {
+    width: 100%;
+    display: block;
+}
+
+.grid .card .website a {
+    background-color: var(--accent-color-3);
+    color: #D8D8D8;
+    padding: 1rem;
+    /* position: absolute; */
+    bottom: .5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.grid .card .website a:hover {
+    background-color: var(--accent-color-4);
+    border: 1px solid var(--accent-color-3);
+    color: var(--accent-color-3);
+}
+
+
+.details {
+    display: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    align-items: stretch;
+}
+
+.list .card {
+    display: flex;
+    flex-wrap: nowrap;
+    /* overflow-x: auto; */
+    border-bottom: none;
+    align-items: stretch;
+    /* min-width: fit-content; */
+    background-color: var(--accent-color-4);
+}
+
+.list .card div {
+    padding: 15px;
+}
+
+.list .card:nth-child(odd) {
+    background-color: var(--accent-color-1);
+}
+
+.list .card .name {
+    /* align-self: auto; */
+    flex-wrap: nowrap;
+    min-width: 220px;
+    text-align: left;
+    display: block;
+}
+
+.list .card .details {
+    display: block;
+    width: 100%;
+    text-align: right;
+    align-self: flex-start;
+}
+
+.list .card .addr {
+    flex-wrap: nowrap;
+    /* border: 1px solid red; */
+    /* display: block; */
+    min-width: 150px;
+    /* max-width: 260px; */
+    width: 100%;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.list .card .phone {
+    min-width: 100px;
+}
+
+.list .card .website {
+    cursor: pointer;
+}
+
+.list .card p,
+.list .card a {
+    margin: 0;
+    text-decoration: none;
+}
+
+.list .card .addr,
+.list .card .phone,
+.list .card .website,
+.list .card img {
+    display: none;
 }
