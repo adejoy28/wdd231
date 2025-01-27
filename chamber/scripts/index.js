@@ -59,9 +59,9 @@ async function displayForecastResult() {
 
             const div = `
                 <div>
-                    <p>Today: ${data.list[0].main.temp}<sup>o</sup> </p>
-                    <p>Tomorrow: ${data.list[19].main.temp}<sup>o</sup> </p>
-                    <p>Next Tomorrow: ${data.list[39].main.temp}<sup>o</sup> </p>
+                    <p>Today: ${data.list[0].main.temp}<sup>o</sup> F</p>
+                    <p>Tomorrow: ${data.list[19].main.temp}<sup>o</sup> F</p>
+                    <p>Next Tomorrow: ${data.list[39].main.temp}<sup>o</sup> F</p>
                 </div>
             `;
             console.log(data);

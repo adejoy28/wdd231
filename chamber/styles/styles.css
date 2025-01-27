@@ -166,12 +166,15 @@ header nav.show ul li a {
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    /* visibility: hidden; */
+    transition: border .2s ease;
+}
+
+.visibility {
+    visibility: hidden;
 }
 
 header nav.show ul li a:hover,
 header nav.show ul li a.active {
-    /* border-bottom: 3px solid var(--background-color); */
     border-left: 3px solid var(--background-color);
 }
 

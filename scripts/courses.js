@@ -140,6 +140,9 @@ function createH3Element(filteredCourses) {
         h3.textContent = `${course.subject} ${course.number}`;
         h3.setAttribute('class', course.completed);
         div.appendChild(h3);
+        h3.addEventListener("click", () => {
+            displayCourseDetails(course);
+        })
     });
 }
 
@@ -149,3 +152,30 @@ function GetValue(value, filter) {
 }
 
 allCourses.click();
+
+
+// Modal Dialog Button
+
+const courseDetails = document.querySelector("#course-details");
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = "";
+    courseDetails.innerHTML = `
+                <div class="modal-box">
+                    <button id="closeModal" autofocus>X</button>
+                    <h2 class="header">${course.subject + " " + course.number}</h2>
+                    <h3 class="title">${course.title}</h3>
+                    <p class="credits">${course.credits} credits</p>
+                    <p class="cert"><strong>Certificate:</strong> ${course.certificate}</p>
+                    <p class="course-desc">${course.description}</p>
+                    <p class="tech"><strong>Technology:</strong> ${course.technology}</p>
+                </div>
+    `
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    })
+}
+
+console.log(courses);

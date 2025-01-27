@@ -138,6 +138,7 @@ main {
     border: var(--dark-color) 1px solid;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    transition: all .3s ease-in;
 }
 
 .course__work h2,
@@ -148,6 +149,7 @@ main {
     text-align: center;
     padding: 10px 0;
     border: var(--dark-color) 1px solid;
+    transition: all .3s ease-in;
     /* box-shadow: var(--box-shadow); */
 }
 
@@ -219,6 +221,7 @@ main {
     /* background-color: var(--dark-color); */
     /* color: var(--light-color); */
     font-weight: 400;
+    cursor: pointer;
 }
 
 .true {
@@ -234,6 +237,84 @@ main {
 .course__certificate .t__Credits__Num {
     padding: 0 30px;
     font-weight: 400;
+}
+
+/* Dialog Styles */
+#course-details {
+    max-width: 600px;
+    width: 80%;
+    border: none;
+    /* opacity: 0;visibility: hidden; */
+    padding: 1rem 1.5rem .5rem;
+    border-radius: 5px solid transparent;
+    animation: fade-out 0.3s ease-out;
+}
+
+#course-details h2,
+h3 {
+    font-weight: bold;
+}
+
+#closeModal {
+    font-weight: bold;
+    float: right;
+    background-color: transparent;
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+    padding: 5px 10px;
+    transition: background-color .3s ease-in;
+}
+
+#closeModal:hover {
+    background-color: var(--danger-color);
+    color: var(--light-color);
+}
+
+#course-details[open] {
+    animation: fade-in 0.3s ease-in;
+}
+
+dialog::backdrop {
+    /* background-color: rgba(0, 0, 0, 0.75); */
+    animation: back-drop-fade-in 0.03s ease-out forwards;
+}
+
+@keyframes back-drop-fade-in {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.76);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+        display: block;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleY(0);
+        display: none;
+    }
 }
 
 /* Footer Styles */

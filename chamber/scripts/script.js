@@ -3,6 +3,7 @@ const nav = document.querySelector('#animate-me');
 
 hamBtn.addEventListener('click', () => {
     nav.classList.toggle('open');
+    nav.classList.toggle('visibility');
     hamBtn.classList.toggle('open');
 });
 
