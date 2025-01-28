@@ -8,8 +8,18 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
 html {
-    line-height: 1.15;
+    line-height: 1.5;
     /* 1 */
     -webkit-text-size-adjust: 100%;
     /* 2 */
@@ -23,7 +33,7 @@ html {
  */
 
 body {
-    margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 /**
@@ -43,6 +53,30 @@ h1 {
     font-size: 2em;
     margin: 0.67em 0;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-swrap: balance;
+}
+
 
 /* Grouping content
    ========================================================================== */
@@ -157,7 +191,13 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 
-img {
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
     border-style: none;
 }
 
@@ -178,7 +218,7 @@ textarea {
     /* 1 */
     font-size: 100%;
     /* 1 */
-    line-height: 1.15;
+    line-height: 1.5;
     /* 1 */
     margin: 0;
     /* 2 */
@@ -376,4 +416,9 @@ template {
 
 [hidden] {
     display: none;
+}
+
+#root,
+#__next {
+    isolation: isolate;
 }

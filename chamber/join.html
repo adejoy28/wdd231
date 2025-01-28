@@ -38,6 +38,7 @@
          <link rel="stylesheet" href="styles/styles.css">
          <link rel="stylesheet" href="styles/styles-medium.css">
          <link rel="stylesheet" href="styles/styles-large.css">
+         <link rel="stylesheet" href="styles/join.css">
 
          <!-- Font awesome -->
          <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"> -->
@@ -49,6 +50,7 @@
          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
 
          <script src="scripts/script.js" defer type="module"></script>
+         <script src="scripts/join.js" defer type="module"></script>
      </head>
 
      <body>
@@ -77,29 +79,102 @@
              </div>
          </header>
          <main>
-             <h1>This is Join Page</h1>
-             <form action="thankyou.html" method="get">
-                 <label for="firstname">
-                     First Name:
-                     <input type="text" name="firstname" id="firstname" required autocomplete="given-name">
-                 </label>
-                 <label for="lastname">
-                     Last Name:
-                     <input type="text" name="lastname" id="lastname" required autocomplete="family-name">
-                 </label>
-                 <label for="organization">
-                     Organization:
-                     <input type="text" name="organization" id="organization" required autocomplete="organization">
-                 </label>
-                 <label for="email">
-                     Email:
-                     <input type="text" name="email" id="email" required autocomplete="email">
-                 </label>
-                 <label for="phone">
-                     phone:
-                     <input type="tel" name="phone" id="phone" required autocomplete="phone">
-                 </label>
-             </form>
+             <div class="join-container">
+
+                 <h1>Membership Registration</h1>
+                 <form action="thankyou.html" method="get">
+                     <label for="firstname">
+                         <input type="text" name="firstname" id="firstname" required autocomplete="given-name">
+                         <span>
+                             First Name:
+                         </span>
+                     </label>
+                     <label for="lastname">
+                         <input type="text" name="lastname" id="lastname" required autocomplete="family-name">
+                         <span>
+                             Last Name:
+                         </span>
+                     </label>
+                     <label for="organization-title">
+                         <input type="text" name="organization-title" id="organization-title" required
+                             autocomplete="organization-title">
+                         <span>
+                             Title:
+                         </span>
+                     </label>
+                     <label for="email">
+                         <input type="text" name="email" id="email" required autocomplete="email">
+                         <span>
+                             Email:
+                         </span>
+                     </label>
+                     <label for="phone">
+                         <input type="tel" name="phone" id="phone" required autocomplete="phone">
+                         <span>
+                             Phone:
+                         </span>
+                     </label>
+                     <label for="business-name">
+                         <input type="text" name="business-name" id="business-name" required
+                             autocomplete="organization">
+                         <span>
+                             Business name:
+                         </span>
+                     </label>
+                     <label for="membership-level">
+                         <select name="membership-level" id="membership-level" required>
+                             <option value="none" selected disabled>Choose membership level</option>
+                             <option value="NP">NP Membership</option>
+                             <option value="bronze">Bronze Membership</option>
+                             <option value="silver">Silver Membership</option>
+                             <option value="gold">Gold Membership</option>
+                         </select>
+                         <!-- <input type="text" name="membership-level" id="membership-level" required
+                         autocomplete="organization">
+                     <span> -->
+                         <!-- Membership Level: -->
+                         </span>
+                     </label>
+                     <label for="business-description">
+                         <textarea name="business-desc" id="business-desc" rows="1"></textarea>
+                         <span>
+                             Business Description
+                         </span>
+                     </label>
+                     <input type="datetime" name="datetime" id="datetime" hidden>
+
+                     <label for="submit">
+                         <button type="submit">Apply for membership</button>
+                     </label>
+                 </form>
+                 <dialog id="membership-level-details"></dialog>
+                 <div id="membership-level-container">
+                     <h2>Membership Levels</h2>
+                     <div class="membership-level">
+                         <div class="card np-level">
+                             <h3>NP Membership (Non-Profit Membership)</h3>
+                             <p>Free membership for non-profit organizations</p>
+                             <button type="button" id="np-level">Learn more...</button>
+                         </div>
+                         <div class="card bronze-level">
+                             <h3>Bronze Membership</h3>
+                             <p>Free membership for non-profit organizations</p>
+                             <button type="button">Learn more...</button>
+                         </div>
+                         <div class="card silver-level">
+                             <h3>Silver Membership</h3>
+                             <p>Free membership for non-profit organizations</p>
+                             <button type="button">Learn more...</button>
+                         </div>
+                         <div class="card gold-level">
+                             <h3>Gold Membership</h3>
+                             <p>Free membership for non-profit organizations</p>
+                             <button type="button">Learn more...</button>
+
+                         </div>
+                     </div>
+                 </div>
+             </div>
          </main>
          <footer>
              <div class="footer-container">
@@ -122,7 +197,6 @@
                      <p class="lstMod">{Last Modification: <span id="lastModified"></span>}</p>
                  </div>
 
-             </div>
          </footer>
      </body>
 

@@ -133,19 +133,21 @@ header .theme:hover {
 
 header nav.show {
     grid-area: nav;
-    display: grid;
-    grid-template-rows: 0fr;
+    display: none;
+    grid-template-rows: 1fr;
+    visibility: hidden;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* visibility: hidden; */
     background-color: var(--secondary-color);
-    transition: grid-template-rows .7s ease-out;
+    animation: display-ease .2s ease-out;
+    /* transition: grid-template-rows .7s ease-out; */
 }
 
 nav ul.menu-links {
     list-style-type: none;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 nav ul {
@@ -156,7 +158,9 @@ nav ul {
 }
 
 header nav.show.open {
+    display: grid;
     grid-template-rows: 1fr;
+    visibility: visible;
 }
 
 header nav.show ul li a {
@@ -169,8 +173,26 @@ header nav.show ul li a {
     transition: border .2s ease;
 }
 
-.visibility {
-    visibility: hidden;
+/* .visibility {} */
+
+@keyframes display-ease {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes display-grid-ease {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 header nav.show ul li a:hover,

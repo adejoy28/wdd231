@@ -25,9 +25,9 @@ picture img {
     /* max-width: 100%; */
     object-fit: contain;
     /* aspect-ratio: 16/9; */
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
-    filter: brightness(80%);
+    filter: brightness(75%);
     /* width: 100%; */
 }
 
