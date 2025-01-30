@@ -38,7 +38,9 @@
          <link rel="stylesheet" href="styles/styles.css">
          <link rel="stylesheet" href="styles/styles-medium.css">
          <link rel="stylesheet" href="styles/styles-large.css">
-         <link rel="stylesheet" href="styles/join.css">
+         <link rel="stylesheet" href="styles/join/join.css">
+         <link rel="stylesheet" href="styles/join/join-large.css">
+
 
          <!-- Font awesome -->
          <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"> -->
@@ -80,8 +82,7 @@
          </header>
          <main>
              <div class="join-container">
-
-                 <h1>Membership Registration</h1>
+                 <h1>Membership Application Form</h1>
                  <form action="thankyou.html" method="get">
                      <label for="firstname">
                          <input type="text" name="firstname" id="firstname" required autocomplete="given-name">
@@ -147,34 +148,50 @@
                          <button type="submit">Apply for membership</button>
                      </label>
                  </form>
-                 <dialog id="membership-level-details"></dialog>
+
                  <div id="membership-level-container">
                      <h2>Membership Levels</h2>
                      <div class="membership-level">
                          <div class="card np-level">
-                             <h3>NP Membership (Non-Profit Membership)</h3>
-                             <p>Free membership for non-profit organizations</p>
-                             <button type="button" id="np-level">Learn more...</button>
+                             <h3>Non-Profit Membership)</h3>
+                             <p>For Non-Profit Organizations</p>
+                             <button type="button" class="level np">Learn more...</button>
                          </div>
                          <div class="card bronze-level">
                              <h3>Bronze Membership</h3>
-                             <p>Free membership for non-profit organizations</p>
-                             <button type="button">Learn more...</button>
+                             <p>For Small Businesses and Start-ups</p>
+                             <button type="button" class="level br">Learn more...</button>
                          </div>
                          <div class="card silver-level">
                              <h3>Silver Membership</h3>
-                             <p>Free membership for non-profit organizations</p>
-                             <button type="button">Learn more...</button>
+                             <p>For Growing Businesses</p>
+                             <button type="button" class="level sl">Learn more...</button>
                          </div>
                          <div class="card gold-level">
                              <h3>Gold Membership</h3>
-                             <p>Free membership for non-profit organizations</p>
-                             <button type="button">Learn more...</button>
+                             <p>For High-Growth Businesses</p>
+                             <button type="button" class="level gl">Learn more...</button>
 
                          </div>
                      </div>
                  </div>
              </div>
+             <dialog id="membership-level-details">
+                 <!-- <button>❌</button>
+                     <h2>Silver Membership</h2>
+                     <span>For Growing Businesses</span>
+                     <p>Silver Membership is tailored for businesses looking to expand their influence and reach. This
+                         level offers more visibility and resources to help you scale your operations while connecting
+                         with other businesses in the region. Silver Members enjoy:</p>
+                     <ul>
+                         <li>All benefits of Bronze Membership, plus:</li>
+                         <li>Premium listing in the Chamber’s online directory</li>
+                         <li>Increased exposure at Chamber events and through marketing campaigns</li>
+                         <li>Priority access to networking events with local business leaders</li>
+                         <li>Access to Chamber-hosted business development and growth seminars</li>
+                         <li>Participation in community sponsorship and partnership opportunities </li>
+                     </ul> -->
+             </dialog>
          </main>
          <footer>
              <div class="footer-container">
