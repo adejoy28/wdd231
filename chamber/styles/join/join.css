@@ -22,7 +22,7 @@
     align-items: space-between;
     opacity: 0.78;
     padding: 1rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 label {
@@ -78,10 +78,12 @@ label textarea {
 }
 
 label input:focus~span,
+label input:valid~span,
 label input:user-valid~span,
 label textarea:focus~span,
+label textarea:valid~span,
 label textarea:user-valid~span {
-    top: .7rem;
+    top: .2rem;
     transform: translateY(-10%);
     font-size: 0.6rem;
     font-weight: bold;
@@ -168,18 +170,23 @@ label button {
     width: 100%;
 }
 
+#membership-level-container h2 {
+    margin-bottom: 2rem;
+}
+
 .membership-level {
-    max-width: 90%;
+    max-width: 95%;
     margin: 0 auto;
 }
 
 .membership-level .card {
-    border: 1px solid var(--primary-color);
     border-radius: 10px;
     text-align: center;
     padding: 20px;
     max-width: 100%;
     margin: .4rem auto;
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 .card:hover {
@@ -201,8 +208,8 @@ label button {
 .card button {
     margin: .5rem auto 0;
     padding: 0.4rem .4rem;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--secondary-color-lite);
+    color: var(--white-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
