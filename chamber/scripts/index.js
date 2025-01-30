@@ -64,7 +64,7 @@ async function displayForecastResult() {
                     <p>Next Tomorrow: ${data.list[39].main.temp}<sup>o</sup> F</p>
                 </div>
             `;
-            console.log(data);
+            // console.log(data);
             // console.log();
             // console.log();
 
@@ -93,7 +93,7 @@ async function FetchMembersAPI(url) {
         const data = await response.json();
 
         if (response.ok) {
-            console.log(data.members);
+            // console.log(data.members);
 
             displayTopMembers(data.members)
 
@@ -129,7 +129,7 @@ const displayTopMembers = (data) => {
                 div.innerHTML += section;
                 count++;
             }
-            console.log(section);
+            // console.log(section);
         }
         // }
     });

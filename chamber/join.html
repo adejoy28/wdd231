@@ -82,73 +82,75 @@
          </header>
          <main>
              <div class="join-container">
-                 <h1>Membership Application Form</h1>
-                 <form action="thankyou.html" method="get">
-                     <label for="firstname">
-                         <input type="text" name="firstname" id="firstname" required autocomplete="given-name">
-                         <span>
-                             First Name:
-                         </span>
-                     </label>
-                     <label for="lastname">
-                         <input type="text" name="lastname" id="lastname" required autocomplete="family-name">
-                         <span>
-                             Last Name:
-                         </span>
-                     </label>
-                     <label for="organization-title">
-                         <input type="text" name="organization-title" id="organization-title" required
-                             autocomplete="organization-title">
-                         <span>
-                             Title:
-                         </span>
-                     </label>
-                     <label for="email">
-                         <input type="text" name="email" id="email" required autocomplete="email">
-                         <span>
-                             Email:
-                         </span>
-                     </label>
-                     <label for="phone">
-                         <input type="tel" name="phone" id="phone" required autocomplete="phone">
-                         <span>
-                             Phone:
-                         </span>
-                     </label>
-                     <label for="business-name">
-                         <input type="text" name="business-name" id="business-name" required
-                             autocomplete="organization">
-                         <span>
-                             Business name:
-                         </span>
-                     </label>
-                     <label for="membership-level">
-                         <select name="membership-level" id="membership-level" required>
-                             <option value="none" selected disabled>Choose membership level</option>
-                             <option value="NP">NP Membership</option>
-                             <option value="bronze">Bronze Membership</option>
-                             <option value="silver">Silver Membership</option>
-                             <option value="gold">Gold Membership</option>
-                         </select>
-                         <!-- <input type="text" name="membership-level" id="membership-level" required
+                 <h1>Join</h1>
+                 <div class="form-container">
+                     <h2>Membership Application Form</h2>
+                     <form action="thankyou.html" method="get">
+                         <label for="firstname">
+                             <input type="text" name="firstname" id="firstname" required autocomplete="given-name">
+                             <span>
+                                 First Name:
+                             </span>
+                         </label>
+                         <label for="lastname">
+                             <input type="text" name="lastname" id="lastname" required autocomplete="family-name">
+                             <span>
+                                 Last Name:
+                             </span>
+                         </label>
+                         <label for="organization-title">
+                             <input type="text" name="organization-title" id="organization-title" required
+                                 autocomplete="organization-title">
+                             <span>
+                                 Title:
+                             </span>
+                         </label>
+                         <label for="email">
+                             <input type="text" name="email" id="email" required autocomplete="email">
+                             <span>
+                                 Email:
+                             </span>
+                         </label>
+                         <label for="phone">
+                             <input type="tel" name="phone" id="phone" required autocomplete="phone">
+                             <span>
+                                 Phone:
+                             </span>
+                         </label>
+                         <label for="business-name">
+                             <input type="text" name="business-name" id="business-name" required
+                                 autocomplete="organization">
+                             <span>
+                                 Business name:
+                             </span>
+                         </label>
+                         <label for="membership-level">
+                             <select name="membership-level" id="membership-level" required>
+                                 <option value="none" selected disabled>Choose membership level</option>
+                                 <option value="NP">NP Membership</option>
+                                 <option value="bronze">Bronze Membership</option>
+                                 <option value="silver">Silver Membership</option>
+                                 <option value="gold">Gold Membership</option>
+                             </select>
+                             <!-- <input type="text" name="membership-level" id="membership-level" required
                          autocomplete="organization">
                      <span> -->
-                         <!-- Membership Level: -->
-                         </span>
-                     </label>
-                     <label for="business-description">
-                         <textarea name="business-desc" id="business-desc" rows="1"></textarea>
-                         <span>
-                             Business Description
-                         </span>
-                     </label>
-                     <input type="datetime" name="datetime" id="datetime" hidden>
+                             <!-- Membership Level: -->
+                             </span>
+                         </label>
+                         <label for="business-description">
+                             <textarea name="business-desc" id="business-desc" rows="1"></textarea>
+                             <span>
+                                 Business Description
+                             </span>
+                         </label>
+                         <input type="datetime" name="datetime" id="datetime" hidden>
 
-                     <label for="submit">
-                         <button type="submit">Apply for membership</button>
-                     </label>
-                 </form>
-
+                         <label for="submit">
+                             <button type="submit">Apply for membership</button>
+                         </label>
+                     </form>
+                 </div>
                  <div id="membership-level-container">
                      <h2>Membership Levels</h2>
                      <div class="membership-level">

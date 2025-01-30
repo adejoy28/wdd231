@@ -2,12 +2,13 @@
     --primary-color: #191D2B;
     --secondary-color: #2c3e50;
     --secondary-color-lite: #4c637a;
+    --white-color: #f8f8f8;
     --accent-color: #FFEAD6;
     --accent-color-1: #bccac1;
     --accent-color-2: #813640;
     --accent-color-3: #191D2B;
     --accent-color-4: #D8D8D8;
-    --background-color: #ca9428;
+    --background-color: #bccac1;
     --text-color: #2c3e50;
     --card-dark-color: var(--accent-color);
     --header-font: 'Lato', sans-serif;
