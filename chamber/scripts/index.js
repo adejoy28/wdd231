@@ -2,6 +2,9 @@ const api = '86115c565cf13fbb6c81d10a4ed106d7';
 // const url = `https://api.openweathermap.org/url/2.5/weather?q=Abeokuta&units=imperial&appid=${appid}`;
 const url = `https://api.openweathermap.org/data/2.5/weather?q=Abeokuta&units=metric&appid=${api}`;
 
+// This displays current weather results on the homepage
+
+
 async function apiFetch(url) {
     try {
         const response = await fetch(url);
@@ -10,7 +13,7 @@ async function apiFetch(url) {
         if (response.ok) {
             // console.log(data);
 
-            displayCurrResults(data)
+            displayCurrWeatherResults(data)
         } else {
             throw Error("Error:" + response.text());
         }
@@ -22,7 +25,7 @@ async function apiFetch(url) {
 
 
 
-const displayCurrResults = (data) => {
+const displayCurrWeatherResults = (data) => {
     const currWeatherSection = document.querySelector("#currWeather");
 
     const imgSrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
@@ -46,6 +49,10 @@ const displayCurrResults = (data) => {
     currWeatherSection.innerHTML += section;
 
 }
+
+
+// || Display forecast weather result ||d
+
 
 async function displayForecastResult() {
     const ForecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Abeokuta&appid=${api}&units=metric`
@@ -85,6 +92,9 @@ function convertToLocaleZone(apiTimeZone, data) {
     return date.toLocaleTimeString();
 }
 
+
+// This displays random 3 top level members on the homepage
+
 const membersURL = "./data/members.json";
 
 async function FetchMembersAPI(url) {
@@ -105,36 +115,57 @@ async function FetchMembersAPI(url) {
     }
 }
 
+const topLevelMember = [];
+
 const displayTopMembers = (data) => {
     const div = document.querySelector("#topBusinessContainer");
     let count = 0;
     data.forEach(item => {
         // while (count <= 2) {
         if (item.membership_level >= 2) {
-            const section = `
-                                <section class="top-business">
-                                    <h1>${item.name} ${item.membership_level}</h1>
-                                    <p class="biz-tagline">Business Tag Line</p>
-                                    <div class="biz-details-container">
-                                    <img src="${item.icon}" alt="${item.description}">
-                                        <div class="biz-details-content">
-                                            <p><b>Email:</b> ${item.email}</p>
-                                            <p><b>Phone:</b> ${item.phone}</p>
-                                            <p><b>URL:</b> <a href="${item.website}">${item.website}</a></p>
-                                        </div>
-                                    </div>
-                                    </section>
-                                    `;
-            if (count <= 2) {
-                div.innerHTML += section;
-                count++;
-            }
-            // console.log(section);
+            topLevelMember.push(item)
         }
-        // }
     });
+
+    const insertSectionIntoDiv = (data) => {
+        data.forEach(item => {
+            const section = `
+                        <section class="top-business">
+                            <h1>${item.name}</h1>
+                            <p class="biz-tagline">Business Tag Line</p>
+                            <div class="biz-details-container">
+                            <img src="${item.icon}" alt="${item.description}">
+                                <div class="biz-details-content">
+                                    <p><b>Email:</b> ${item.email}</p>
+                                    <p><b>Phone:</b> ${item.phone}</p>
+                                    <p><b>URL:</b> <a href="${item.website}">${item.website}</a></p>
+                                </div>
+                            </div>
+                            </section>
+                            `;
+            div.innerHTML += section;
+        });
+    }
+    insertSectionIntoDiv(rndMember(topLevelMember));
+    // console.log(insertSectionIntoDiv(rndMember(topLevelMember)));
 }
 
+function rndMember(members) {
+    let rnd = [];
+
+
+    // for (let i = 0; i < members.length; i++) {
+    while (rnd.length < 3) {
+        const rndNum = Math.floor(Math.random() * members.length);
+        if (!rnd.includes(members[rndNum])) {
+            rnd.push(members[rndNum]);
+        }
+    }
+    // console.log(rnd.includes(0));
+    // console.log(rnd.includes(3));
+    // console.log(rnd.includes(1));
+    return rnd;
+}
 
 apiFetch(url);
 displayForecastResult();
