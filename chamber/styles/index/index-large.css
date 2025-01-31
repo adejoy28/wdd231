@@ -16,7 +16,7 @@
         grid-template-areas: "event event"
             "currweather forecast";
         /* align-items: center; */
-        justify-items: space-around;
+        justify-content: space-around;
         /* max-width: 350px; */
         margin: 0 auto;
     }

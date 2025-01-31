@@ -108,7 +108,7 @@ picture img {
         "low sunrise"
         "wind sunset";
     /* align-items: center; */
-    justify-items: space-around;
+    justify-content: space-around;
     max-width: 350px;
     margin: 0 auto;
 }
