@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Regex Tutorial</title>
+    </head>
+
+    <body>
+        <p>Enter your phone number (with area code) and then click "Check"
+            <br>
+            The expected format is like ###-###-####.
+        </p>
+        <form id="form">
+            <input name="" id="input">
+            <button type="submit">Check</button>
+        </form>
+        <p id="output"></p>
+
+        <script type="text/javascript">
+            const form = document.querySelector("#form");
+            const input = document.querySelector("#input");
+            const output = document.querySelector("#output");
+
+            const re = /^(?:\d{3}|\(\d{3}\))([-/.])\d{3}\1\d{4}$/;
+            // const re = /[A-Z]{2,6}/;
+
+            function testInfo(userInput) {
+                console.log(userInput.value);
+                const ok = re.exec(userInput.value);
+                console.log(ok);
+                output.textContent = ok ? `Thanks your phone number is  ${ok[0]}` :
+                    `${userInput.value} is not a valid phone number`;
+            }
+            // input.addEventListener('')
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                testInfo(input);
+            })
+        </script>
+    </body>
+
+</html>

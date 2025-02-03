@@ -149,3 +149,21 @@ function populateModal(level) {
 }
 
 // populateModal(memberLevelInfo);
+
+// fix date in to hidden date input
+
+const hDate = document.querySelector("#datetime");
+
+const newDate = new Date();
+
+const [dd, mm, yyyy] = [
+    newDate.getDate(),
+    newDate.getMonth()+1,
+    newDate.getFullYear(),
+
+]
+
+hDate.value = `${dd}-${mm}-${yyyy}`;//.toLocaleDateString();
+
+console.clear()
+console.log(hDate.value);
