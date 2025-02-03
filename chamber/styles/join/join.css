@@ -118,6 +118,10 @@ label button {
 #membership-level-details {
     max-width: 600px;
     width: 100%;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: none;
     /* opacity: 0;visibility: hidden; */
     padding: 1rem 1.5rem .5rem;
@@ -187,6 +191,7 @@ label button {
     margin: .4rem auto;
     background-color: var(--primary-color);
     color: var(--white-color);
+    animation: come-in 0.2s forwards;
 }
 
 .card:hover {
@@ -222,4 +227,17 @@ label button {
 .card button:focus-visible {
     background-color: var(--secondary-color);
     outline: none;
+}
+
+@keyframes come-in {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+        /* transform: translateY(200px); */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

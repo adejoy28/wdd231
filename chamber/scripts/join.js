@@ -10,7 +10,7 @@ const membershipDialog = document.querySelector('#membership-level-details');
 const memberLevelInfo = [
     {
         title: "NP Membership (Non-Profit Membership)",
-        price: "No fee",
+        price: 0,
         shortDesc: "For Non-Profit Organizations",
         description: "This membership level is designed for registered non-profit organizations. As part of our community, non-profits can enjoy the full benefits of membership without any financial cost. By joining, non-profits gain access to networking opportunities, visibility, and resources to help enhance their community impact. The NP membership offers:",
         benefits: [
@@ -125,7 +125,6 @@ function populateModal(level) {
     div += `<ul>
             <p><strong>Eligibility:</strong> ${level.eligibity}</p>
             <p><strong>Price:</strong> ₦${level.price}</p>
-            <button>Join Now</button>
     `;
 
     ` <li>All benefits of Bronze Membership, plus:</li>
@@ -158,12 +157,16 @@ const newDate = new Date();
 
 const [dd, mm, yyyy] = [
     newDate.getDate(),
-    newDate.getMonth()+1,
+    newDate.getMonth() + 1,
     newDate.getFullYear(),
 
-]
+];
+hDate.value = `${dd}-${mm}-${yyyy}`;
 
-hDate.value = `${dd}-${mm}-${yyyy}`;//.toLocaleDateString();
+// Validate the Title input
+const title = document.querySelector("#organization-title")
 
-console.clear()
-console.log(hDate.value);
+// alert(title.value);
+const regExp = /[a-z][A-Z]/;
+
+regExp.exec

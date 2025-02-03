@@ -26,14 +26,10 @@ const section = `
         <section>
             <h2>Submission successful</h2>
             <p><b>Name</b>: ${show('firstname')}, ${show('lastname')}</p>
-            <p><b>Title</b>: ${show('organization-title')}</p>
-            <p><b>Phone</b>: ${show('phone')}</p>
             <p><b>Email</b>: ${show('email')}</p>
+            <p><b>Phone</b>: ${show('phone')}</p>
             <p><b>Business Name</b>: ${show('business-name')}</p>
-            <p><b>Membership level</b>: ${show('membership-level')}</p>
-            <p><b>Business Description</b>: ${show('business-description')}
-            </p>
-            <p><b>Date</b>: ${show('datetime')}</p>
+           <p><b>Date</b>: ${show('datetime')}</p>
         </section>
 `
 
