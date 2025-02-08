@@ -93,11 +93,13 @@ label textarea:user-valid~span {
     /* color: var(--secondary-color); */
 }
 
-label input:user-invalid {
+label input:user-invalid,
+.invalid {
     border-bottom: 1px solid red;
 }
 
-label input:user-valid {
+label input:user-valid,
+.valid {
     border-bottom: 1px solid green;
 }
 

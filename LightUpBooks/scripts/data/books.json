@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "The Pragmatic Programmer",
+        "author": "Andrew Hunt & David Thomas",
+        "price": 25.99,
+        "image": "images/pragmatic.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "price": 29.99,
+        "image": "images/clean_code.jpg"
+    }
+]

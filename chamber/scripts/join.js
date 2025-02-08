@@ -1,12 +1,7 @@
-// const learnMoreBtn = document.querySelector('#np-level');
+// Select the membership dialog element
 const membershipDialog = document.querySelector('#membership-level-details');
 
-
-// learnMoreBtn.addEventListener('click', () => {
-// window.location.href = "join.html";
-//     membershipDialog.showModal();
-// });
-// ₦187,500
+// Membership level information array
 const memberLevelInfo = [
     {
         title: "NP Membership (Non-Profit Membership)",
@@ -16,7 +11,7 @@ const memberLevelInfo = [
         benefits: [
             "Listing in the Chamber’s online directory",
             "Access to networking events and community activities",
-            "Eligibility for non - profit specific grants and sponsorship opportunities",
+            "Eligibility for non-profit specific grants and sponsorship opportunities",
             "Invitations to participate in educational workshops and business development seminars",
             "Advocacy and representation at the local and state level",
         ],
@@ -72,101 +67,67 @@ const memberLevelInfo = [
         ],
         eligibity: "Perfect for established companies looking to solidify their leadership role in the community and benefit from high-level exposure.",
     }
-]
+];
 
+// Select all elements with the class 'level'
 const btn = document.querySelectorAll('.level');
-console.log(btn);
 
-// btn.forEach(level => {
-for (let i = 0; i < btn.length; i++) {
-    const currIndex = btn[i];
-    currIndex.addEventListener('click', () => {
+// Add click event listeners to each button
+btn.forEach((level, i) => {
+    level.addEventListener('click', () => {
         const currLevel = memberLevelInfo[i];
         populateModal(currLevel);
         membershipDialog.showModal();
-        // sho
     });
+});
 
-}
-
-// level.addEventListener('click', (e) => {
-//     console.log(btn.indexOf);
-//     // c
-//     const classList = //e.currentTarget;
-//         // if (classList.contains('np')) {
-//         console.log(classList);
-//     //     const currlevel = memberLevelInfo[0];
-//     //     populateModal(currlevel);
-//     // }
-// });
-// });
-// btn.forEach(level => {
-//     level.addEventListener('click', () => {
-//         // console.log(level.id);
-//         // populateModal(memberLevelInfo.filter(item => item.title === level.id));
-//         // membershipDialog.showModal();
-//     });
-// });
-
+// Function to populate the modal with membership details
 function populateModal(level) {
     const modal = document.querySelector('#membership-level-details');
-
-    // levels.forEach(level[0] => {
-    // console.table(level);
     let div = `
-            <button id="closeModal">❌</button>
-            <h2>${level.title}</h2>
-            <span>${level.shortDesc}</span>
-            <p>${level.description}</p>
-            <ul>`;
+        <button id="closeModal">❌</button>
+        <h2>${level.title}</h2>
+        <span>${level.shortDesc}</span>
+        <p>${level.description}</p>
+        <ul>`;
     level.benefits.forEach(benefit => {
         div += `<li>${benefit}</li>`;
     });
-    div += `<ul>
-            <p><strong>Eligibility:</strong> ${level.eligibity}</p>
-            <p><strong>Price:</strong> ₦${level.price}</p>
+    div += `</ul>
+        <p><strong>Eligibility:</strong> ${level.eligibity}</p>
+        <p><strong>Price:</strong> ₦${level.price}</p>
     `;
-
-    ` <li>All benefits of Bronze Membership, plus:</li>
-                <li>Premium listing in the Chamber’s online directory</li>
-                <li>Increased exposure at Chamber events and through marketing campaigns</li>
-                <li>Priority access to networking events with local business leaders</li>
-                <li>Access to Chamber-hosted business development and growth seminars</li>
-                <li>Participation in community sponsorship and partnership opportunities </li>
-            </ul>
-        `;
-    // });
-
     modal.innerHTML = div;
 
+    // Add event listener to close the modal
     const closeModal = document.querySelector('#closeModal');
     closeModal.addEventListener('click', () => {
         modal.close();
     });
-
-    // console.log(level);
 }
 
-// populateModal(memberLevelInfo);
-
-// fix date in to hidden date input
-
+// Set the current date in the hidden date input
 const hDate = document.querySelector("#datetime");
-
 const newDate = new Date();
-
 const [dd, mm, yyyy] = [
     newDate.getDate(),
     newDate.getMonth() + 1,
     newDate.getFullYear(),
-
 ];
 hDate.value = `${dd}-${mm}-${yyyy}`;
 
 // Validate the Title input
-const title = document.querySelector("#organization-title")
+const title = document.querySelector("#organization-title");
+const regExp = /^[a-zA-Z\s-]{7,}$/;
 
-// alert(title.value);
-const regExp = /[a-z][A-Z]/;
-
-regExp.exec
+title.addEventListener("input", () => {
+    if (!regExp.test(title.value)) {
+        title.setCustomValidity("Please enter a valid organization title");
+        title.classList.add("invalid");
+        title.classList.remove("valid");
+    } else {
+        title.setCustomValidity("");
+        title.classList.add("valid");
+        title.classList.remove("invalid");
+    }
+});

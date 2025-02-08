@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Olumo Rock",
+        "address": "Olumo Rock, Kuto, Abeokuta, Ogun State, Nigeria",
+        "cost": "₦1,000 - ₦2,000 (adults); ₦500 - ₦1,000 extra for elevator",
+        "description": "Olumo Rock is a historical site and a great place to explore. It was once used as a fortress by the Egba people during the 19th century. You can hike to the top of the rock for panoramic views of Abeokuta or take an elevator for easy access.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Olumo_Rock_%28Abeokuta%29.JPG"
+    },
+    {
+        "name": "Oja-Oba Market (King's Market)",
+        "address": "Oja-Oba Market, Abeokuta, Ogun State, Nigeria",
+        "cost": "Free entry (depends on purchases)",
+        "description": "A busy local market offering everything from fresh produce to crafts and textiles. It’s perfect for experiencing the hustle and bustle of daily life in Abeokuta.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Oja_Oba_Market_%28Abeokuta%29.jpg"
+    },
+    {
+        "name": "June 12 Cultural Center",
+        "address": "June 12 Cultural Center, Abeokuta, Ogun State, Nigeria",
+        "cost": "Event-dependent",
+        "description": "A cultural center offering performances, exhibitions, and festivals showcasing the local art and culture. It’s the perfect place to enjoy live music, theater, and more.",
+        "photo_url": "https://www.nigeriagalleria.com/Nigeria/States_Nigeria/Ogun/june-12-culture-center.jpg"
+    },
+    {
+        "name": "National Museum of Colonial History",
+        "address": "National Museum, Oke-Ilewo, Abeokuta, Ogun State, Nigeria",
+        "cost": "₦500 - ₦1,000",
+        "description": "A museum dedicated to Nigeria’s colonial history, showcasing historical artifacts from the period. It’s an insightful stop for anyone interested in Nigerian history.",
+        "photo_url": "https://www.ngex.com/travel/pictures/abeokuta_museum_1.jpg"
+    },
+    {
+        "name": "Abeokuta Golf Course",
+        "address": "Abeokuta Golf Course, Ake, Abeokuta, Ogun State, Nigeria",
+        "cost": "₦2,000 - ₦3,000 per round",
+        "description": "This beautiful golf course offers a relaxing environment for golf lovers. It’s surrounded by nature and provides a peaceful setting to enjoy a round of golf.",
+        "photo_url": "https://static.wixstatic.com/media/4d58b7_61f12c580e0b4ba59a51eadae98c7407.jpg/v1/fill/w_1280,h_720,al_c,q_90/4d58b7_61f12c580e0b4ba59a51eadae98c7407.jpg"
+    },
+    {
+        "name": "Ake Palace",
+        "address": "Ake, Abeokuta, Ogun State, Nigeria",
+        "cost": "Free entry for the exterior; fee for specific tours",
+        "description": "Ake Palace is the residence of the Alake of Egbaland. Although you can’t always tour the palace itself, the area is rich with culture and history.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Ake_Palace.jpg"
+    },
+    {
+        "name": "Itoku Market",
+        "address": "Itoku, Abeokuta, Ogun State, Nigeria",
+        "cost": "Free entry (cost depends on purchases)",
+        "description": "Famous for its Aso-ebi (traditional fabrics) and local crafts, Itoku Market is a great place to shop for souvenirs and authentic Nigerian fashion.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Itoku_Market.jpg"
+    },
+    {
+        "name": "Oke-Ilewo Park",
+        "address": "Oke-Ilewo, Abeokuta, Ogun State, Nigeria",
+        "cost": "Free entry",
+        "description": "A serene park in Abeokuta where you can relax, have a picnic, or enjoy a quiet day outdoors with friends and family.",
+        "photo_url": "https://www.exploreogun.com/wp-content/uploads/2018/08/oke-ilewo-park.jpg"
+    },
+    {
+        "name": "Bilikisu Sungbo Shrine",
+        "address": "Oke-Eri, Ijebu, Ogun State, Nigeria",
+        "cost": "Free entry",
+        "description": "A historic site dedicated to the legendary Queen Bilikisu Sungbo. The shrine is located in a peaceful area surrounded by nature, offering a spiritual experience tied to local folklore.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Bilikisu_Sungbo_Shrine.jpg"
+    },
+    {
+        "name": "Abeokuta Wildlife Park",
+        "address": "Abeokuta Wildlife Park, Abeokuta, Ogun State, Nigeria",
+        "cost": "₦500 - ₦1,500 (depending on age and group)",
+        "description": "A small wildlife park that is home to several species of animals, including monkeys and birds. It’s a family-friendly location where you can learn about wildlife conservation.",
+        "photo_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Abeokuta_wildlife_park.jpg"
+    }
+]
