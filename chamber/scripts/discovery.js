@@ -15,8 +15,8 @@ funPlaces.then(data => {
             <h2 class="place-title">${place.name}</h2>
             <p class="place-description">${place.description}</p>
             <div class="place-image">
-                <a href="${place.photo_url}"><img src="${place.photo_url}" alt="${place.name}" width="250" height="250">
-           </a> </div>
+                <img src="${place.photo_url}" alt="${place.name}" width="250" height="250" loading="lazy">
+            </div>
             <p class="place-address">${place.address}</p>
             <button type="button" id="button" class="btn">Learn More</button>
         </section>
