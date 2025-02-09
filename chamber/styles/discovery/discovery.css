@@ -1,0 +1,61 @@
+main .container {
+    background-color: var(--white-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.place-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "title"
+        "picture"
+        "description"
+        "address"
+        "button";
+    grid-template-columns: 1fr;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 1rem;
+    font-size: .8rem;
+}
+
+.place-cards .place-title {
+    grid-area: title;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.place-cards .place-image {
+    grid-area: picture;
+    display: grid;
+    justify-self: center;
+}
+
+.place-cards .place-image {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.place-cards .place-description {
+    grid-area: description;
+    text-align: center;
+}
+
+.place-cards .place-address {
+    grid-area: address;
+    text-align: center;
+}
+
+.place-cards .place-button {
+    grid-area: button;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
