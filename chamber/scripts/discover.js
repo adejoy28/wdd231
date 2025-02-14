@@ -14,10 +14,10 @@ funPlaces.then(data => {
         <section class="place-cards">
             <h2 class="place-title">${place.name}</h2>
             <p class="place-description">${place.description}</p>
-            <div class="place-image">
-                <img src="${place.photo_url}" alt="${place.name}" width="250" height="250" loading="lazy">
-            </div>
-            <p class="place-address">${place.address}</p>
+            <figure class="place-image">
+                <img src="${place.photo_url}" alt="${place.name}" width="300" height="200" loading="lazy">
+            </figure>
+            <address class="place-address">${place.address}</address>
             <button id="button" class="place-btn">Learn More</button>
         </section>
 `;

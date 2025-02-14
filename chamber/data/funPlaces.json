@@ -2,73 +2,59 @@
     "places": [
         {
             "name": "Olumo Rock",
-            "address": "Olumo Rock, Kuto, Abeokuta, Ogun State, Nigeria",
-            "cost": "₦1,000 - ₦2,000 (adults); ₦500 - ₦1,000 extra for elevator",
-            "description": "Olumo Rock is a historical site and a great place to explore. It was once used as a fortress by the Egba people during the 19th century. You can hike to the top of the rock for panoramic views of Abeokuta or take an elevator for easy access.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
+            "address": "Ikija Road, Abeokuta 110101, Nigeria",
+            "cost": "Admission fees may vary; check locally for current rates",
+            "description": "Olumo Rock is a natural granite formation that served as a fortress for the Egba people during inter-tribal wars in the 19th century. Today, it offers visitors panoramic views of Abeokuta and insights into its rich history.",
+            "photo_url": "./images/discovery/olumo-rockx.webp"
         },
         {
-            "name": "Oja-Oba Market (King's Market)",
-            "address": "Oja-Oba Market, Abeokuta, Ogun State, Nigeria",
-            "cost": "Free entry (depends on purchases)",
-            "description": "A busy local market offering everything from fresh produce to crafts and textiles. It’s perfect for experiencing the hustle and bustle of daily life in Abeokuta.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
+            "name": "OOPL",
+            "address": "Presidential Boulevard, Oke-Mosan, Abeokuta 110272, Nigeria",
+            "cost": "Admission fees may vary; check locally for current rates",
+            "description": "Olusegun Obasanjo Presidential Library and museum complex chronicles the life and times of Nigeria's former President, Olusegun Obasanjo. It houses a rich collection of exhibits, including historical documents, artifacts, and photographs, providing deep insights into Nigeria's political history.",
+            "photo_url": "./images/discovery/oopl-resized.webp"
         },
         {
-            "name": "June 12 Cultural Center",
-            "address": "June 12 Cultural Center, Abeokuta, Ogun State, Nigeria",
-            "cost": "Event-dependent",
-            "description": "A cultural center offering performances, exhibitions, and festivals showcasing the local art and culture. It’s the perfect place to enjoy live music, theater, and more.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
+            "name": "Adonisplaza Paintball",
+            "address": "Contact the center directly for precise location information",
+            "cost": "Pricing details are limited; contact the center for current rates",
+            "description": "Adonisplaza offers a variety of recreational activities, including paintball, table tennis, snooker, virtual reality experiences, and PlayStation gaming, ensuring a fun-filled experience for visitors.",
+            "photo_url": "./images/discovery/adonisplaza-paintball-r.webp"
+        },
+        {
+            "name": "OOPL Wildlife Park",
+            "address": "Located within the Olusegun Obasanjo Presidential Library complex in Abeokuta, Nigeria",
+            "cost": "Admission fees may vary; check locally for current rates",
+            "description": "The OOPL Wildlife Park is home to a variety of animal species, offering visitors an opportunity to observe wildlife in a serene environment. It's an ideal destination for family outings and educational tours.",
+            "photo_url": "./images/discovery/oopl-wildlife-r.webp"
+        },
+        {
+            "name": "Centenary Hall",
+            "address": "Ake, Abeokuta, Nigeria",
+            "cost": "Typically free to visit; access may be restricted during events",
+            "description": "Built in 1930 to commemorate the centenary of Abeokuta's founding, Centenary Hall is a historic landmark that showcases colonial-era architecture and serves as a venue for various cultural events.",
+            "photo_url": "./images/discovery/centenary-hall-r.webp"
+        },
+        {
+            "name": "The Alake of Egba Palace",
+            "address": "Ake Road, Abeokuta 111101, Nigeria",
+            "cost": "Typically free to visit; guided tours may incur a fee",
+            "description": "The palace is the traditional residence of the Alake, the paramount ruler of the Egba people. It offers insights into Yoruba culture, history, and traditional governance, featuring artifacts and architectural designs of historical significance.",
+            "photo_url": "./images/discovery/alake-r.webp"
+        },
+        {
+            "name": "June 12 Cultural Centre",
+            "address": "Kuto, Abeokuta, Nigeria",
+            "cost": "Admission fees may vary; check locally for current rates",
+            "description": "Named in commemoration of the annulled June 12 presidential election of 1993, the June 12 Cultural Centre is a major landmark in Abeokuta. It serves as a venue for cultural events, exhibitions, and performances, celebrating Nigeria's rich cultural heritage.",
+            "photo_url": "./images/discovery/june12-r.webp"
         },
         {
             "name": "National Museum of Colonial History",
             "address": "National Museum, Oke-Ilewo, Abeokuta, Ogun State, Nigeria",
             "cost": "₦500 - ₦1,000",
             "description": "A museum dedicated to Nigeria’s colonial history, showcasing historical artifacts from the period. It’s an insightful stop for anyone interested in Nigerian history.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
-        },
-        {
-            "name": "Abeokuta Golf Course",
-            "address": "Abeokuta Golf Course, Ake, Abeokuta, Ogun State, Nigeria",
-            "cost": "₦2,000 - ₦3,000 per round",
-            "description": "This beautiful golf course offers a relaxing environment for golf lovers. It’s surrounded by nature and provides a peaceful setting to enjoy a round of golf.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
-        },
-        {
-            "name": "Ake Palace",
-            "address": "Ake, Abeokuta, Ogun State, Nigeria",
-            "cost": "Free entry for the exterior; fee for specific tours",
-            "description": "Ake Palace is the residence of the Alake of Egbaland. Although you can’t always tour the palace itself, the area is rich with culture and history.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
-        },
-        {
-            "name": "Itoku Market",
-            "address": "Itoku, Abeokuta, Ogun State, Nigeria",
-            "cost": "Free entry (cost depends on purchases)",
-            "description": "Famous for its Aso-ebi (traditional fabrics) and local crafts, Itoku Market is a great place to shop for souvenirs and authentic Nigerian fashion.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
-        },
-        {
-            "name": "Oke-Ilewo Park",
-            "address": "Oke-Ilewo, Abeokuta, Ogun State, Nigeria",
-            "cost": "Free entry",
-            "description": "A serene park in Abeokuta where you can relax, have a picnic, or enjoy a quiet day outdoors with friends and family.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
-        },
-        {
-            "name": "Bilikisu Sungbo Shrine",
-            "address": "Oke-Eri, Ijebu, Ogun State, Nigeria",
-            "cost": "Free entry",
-            "description": "A historic site dedicated to the legendary Queen Bilikisu Sungbo. The shrine is located in a peaceful area surrounded by nature, offering a spiritual experience tied to local folklore.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
-        },
-        {
-            "name": "Abeokuta Wildlife Park",
-            "address": "Abeokuta Wildlife Park, Abeokuta, Ogun State, Nigeria",
-            "cost": "₦500 - ₦1,500 (depending on age and group)",
-            "description": "A small wildlife park that is home to several species of animals, including monkeys and birds. It’s a family-friendly location where you can learn about wildlife conservation.",
-            "photo_url": "./images/discovery/olumo-rock.jpg"
+            "photo_url": "./images/discovery/national-museum.webp"
         }
     ]
 }

@@ -1,12 +1,13 @@
 @media screen and (min-width: 60rem) {
     main .container {
         grid-template-columns: 1fr 1fr;
+        max-width: 1400px;
     }
 
     .place-cards {
         display: grid;
-        grid-template-columns: 1fr 2.5fr;
-        gap: 1rem;
+        grid-template-columns: 1fr 1.5fr;
+        gap: .2rem;
         grid-template-areas:
             "picture title"
             "picture description"
@@ -14,6 +15,12 @@
             "picture button";
         justify-content: start;
         align-items: start;
+        place-content: start;
+        text-align: left;
+        font-size: .7rem;
     }
 
+    .place-cards * {
+        border: 1px solid red;
+    }
 }
