@@ -19,8 +19,4 @@
         text-align: left;
         font-size: .7rem;
     }
-
-    .place-cards * {
-        border: 1px solid red;
-    }
 }
