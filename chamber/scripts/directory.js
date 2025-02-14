@@ -1,4 +1,4 @@
-import { gridListBtnFunction } from "./modules/grid.mjs";
+import { gridListBtnFunction } from "./modules/functionsLib.mjs";
 
 gridListBtnFunction();
 

@@ -1,7 +1,25 @@
+/* Root variables */
+:root {
+    --primary-color: #191D2B;
+    --secondary-color: #2c3e50;
+    --secondary-color-lite: #35495c;
+    --white-color: #f8f8f8;
+    --accent-color: #FFEAD6;
+    --accent-color-1: #bccac1;
+    --accent-color-2: #813640;
+    --accent-color-3: #191D2B;
+    --accent-color-4: #D8D8D8;
+    --background-color: #bccac1;
+    --text-color: #2c3e50;
+    --card-dark-color: var(--accent-color);
+    --header-font: 'Lato', sans-serif;
+    --body-font: 'Verdana', sans-serif;
+    --background-color: linear-gradient(90deg, rgba(128, 0, 128, 1) 0%, rgba(221, 160, 221, 1) 100%);
+}
+
 /* General Styles */
 body {
-    font-family: "Georgia", serif;
-    background-color: #f4f1ea;
+    background: #f4f1ea;
     color: #4a2f27;
     margin: 0;
     padding: 0;
@@ -9,7 +27,7 @@ body {
 
 /* Header */
 header {
-    background-color: #6b4226;
+    background: var(--background-color);
     color: white;
     padding: 20px;
     text-align: center;

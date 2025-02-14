@@ -18,5 +18,6 @@ hamBtn.addEventListener('click', () => {
 //     console.log(link.currentTarget);
 // })
 
-import { lasModDate } from "./modules/getdates.js";
+import { lasModDate } from "./modules/functionsLib.mjs";
+// import { lasModDate } from "./modules/getdates.js";
 lasModDate();

@@ -1,26 +1,30 @@
-import { funPlaces } from "../scripts/modules/funPlace.mjs";
-const div = document.querySelector('#funPlaces');
+// milliseconds to days constant = 1000 ms/s * 60 s/m * 60 m/h * 24 h/day
+const msToDays = 86400000;
+// today's date
+const theDateToday = new Date();
 
-// displayFunPlaces(data.places);
+// initialize display elements
+const todayElement = document.querySelector("#today");
+const christmasElement = document.querySelector("#christmas");
+const christmasDateElement = document.querySelector("#christmasDate");
+const daysElement = document.querySelector("#daysleft");
+
+// processing
+const today = Date.now();
+const christmasDate = new Date(Date.UTC(theDateToday.getFullYear(), 11, 25));
+// check if is the waing days of December, if so ... change to next year.
+if (theDateToday.getMonth() == 11 && theDateToday.getDate() > 25) {
+    christmasDate.setFullYear(christmasDate.getFullYear() + 1);
+}
+// find difference between epoch times in ms and convert to days
+let daysleft = (christmasDate.getTime() - Date.now()) / msToDays;
+
+todayElement.textContent = today;
+christmasElement.textContent = christmasDate.getTime();
+christmasDateElement.textContent = christmasDate;
+daysElement.textContent = `${daysleft} days`;
 
 
+// today date - date last visited
 
-
-funPlaces.then(data => {
-    data.places.forEach(place => {
-
-        // const place = data.places;
-        const section = `
-        <section class="place-cards">
-            <h2 class="place-title">${place.name}</h2>
-            <p class="place-description">${place.description}</p>
-            <div class="place-image">
-                <img src="${place.photo_url}" alt="${place.name}" width="250" height="250" loading="lazy">
-            </div>
-            <p class="place-address">${place.address}</p>
-            <button type="button" id="button" class="btn">Learn More</button>
-        </section>
-`;
-        div.innerHTML += section;
-    });
-});
+// Date.now() - dateVisted / msToDaysl

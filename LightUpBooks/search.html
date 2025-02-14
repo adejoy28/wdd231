@@ -34,6 +34,7 @@
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-large.css">
+        <link rel="stylesheet" href="styles/search.css">
 
         <!-- Stylesheets -->
 
@@ -44,24 +45,29 @@
             <h1>Online Bookstore</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Book List</a></li>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">Book List</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
+            <div>
+                <form action="search.html" method="get" id="search">
+                    <input type="search" name="search" id="searchBooks" placeholder="Search books here!" required>
+                    <button type="submit" id="searcghBooks-button">Search</button>
+                </form>
+            </div>
+            <div id="searchOutput">
 
-            <h2>New Collection Books</h2>
-            <div id="book-list" class="book-container"></div>
-            <h2>Featured Books</h2>
-            <div id="featured-book-list" class="book-container"></div>
+            </div>
         </main>
 
         <!-- Scripts starts -->
-        <script src="scripts/index.js" type="module"></script>
+        <!-- <script src="scripts/index.js" type="module"></script> -->
+        <script src="scripts/search.js" type="module"></script>
         <!-- Scripts ends -->
     </body>
 

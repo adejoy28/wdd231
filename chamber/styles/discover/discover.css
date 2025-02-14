@@ -1,0 +1,115 @@
+h1 {
+    text-align: center;
+}
+
+main .container {
+
+    margin: 0 auto;
+    background-color: var(--white-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    grid-auto-rows: max-content;
+    gap: 1rem;
+}
+
+.place-cards {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "picture"
+        "description"
+        "address"
+        "button";
+    grid-template-columns: 1fr;
+    /* grid-auto-rows: stretch; */
+    border: 1px solid var(--secondary-color);
+    max-width: 100%;
+    border-radius: 0.5rem;
+    /* overflow: hidden; */
+    padding: 1rem;
+    font-size: .8rem;
+    gap: .5rem;
+}
+
+.place-cards .place-title {
+    grid-area: title;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.place-cards .place-image {
+    grid-area: picture;
+    display: grid;
+    justify-self: center;
+}
+
+.place-cards .place-image {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.place-cards .place-description {
+    grid-area: description;
+    text-align: center;
+}
+
+.place-cards .place-address {
+    grid-area: address;
+    text-align: center;
+}
+
+.place-cards .place-btn,
+.place-cards .place-btn:active {
+    grid-area: button;
+    padding: .5rem;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    outline: none;
+}
+
+.place-cards .place-btn:hover {
+    background-color: var(--secondary-color-lite);
+}
+
+/* Welcome Message Dialog Box Styles */
+#welcomeMessage {
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 10%;
+    /* right: 10%; */
+    /* transform: translateX(500%); */
+    animation: SlideIn 3s 2s ease-in forwards;
+}
+
+#welcomeMessage::backdrop {
+    display: none;
+}
+
+#welcomeMessage:has(:not(:hover))::backdrop {
+    display: none;
+}
+
+.dialog-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    float: right;
+    justify-self: end;
+}
+
+@keyframes SlideIn {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-500%);
+    }
+}

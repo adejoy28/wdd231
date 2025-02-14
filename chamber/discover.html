@@ -38,7 +38,9 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-medium.css">
         <link rel="stylesheet" href="styles/styles-large.css">
-        <link rel="stylesheet" href="styles/discovery/discovery.css">
+        <link rel="stylesheet" href="styles/discover/discover.css">
+        <link rel="stylesheet" href="styles/discover/discover-medium.css">
+        <link rel="stylesheet" href="styles/discover/discover-large.css">
 
         <!-- Font awesome -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"> -->
@@ -50,7 +52,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
 
         <script src="scripts/script.js" type="module"></script>
-        <script src="scripts/discovery.js" type="module"></script>
+        <script src="scripts/discover.js" type="module"></script>
     </head>
 
     <body>
@@ -80,22 +82,15 @@
         </header>
         <main>
             <h1>Chamber Discover</h1>
-            <div id='funPlaces' class="container">
-                <!-- <section class="place-cards">
-                    <h2 class="place-title">Teasetor Amazons</h2>
-                    <p class="place-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut fuga
-                        praesentium, vero molestiae, tempora facilis itaque cupiditate voluptatum dolores perferendis
-                        neque possimus sapiente nihil magni numquam maiores maxime! Inventore, blanditiis?</p>
-                    <div class="place-image">
-                        <img src="images/discovery/olumo-rock.jpg" alt="olumo_rock" width="250" height="250">
-                    </div>
-                    <p class="place-address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nisi?
-                    </p>
-                    <button type="button" id="button" class="btn">Learn More</button>
-                </section> -->
-            </div>
+            <div id='funPlaces' class="container"></div>
         </main>
         <footer>
+            <dialog id="welcomeMessage">
+                <div class="dialog-container">
+                    <button id="closeModal">❌</button>
+                    <h2 id="message">Welcome! Let us know if you have any questions.</h2>
+                </div>
+            </dialog>
             <div class="footer-container">
                 <div class="site-details">
                     <p>Leme Chamber of Commerce</p>

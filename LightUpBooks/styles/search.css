@@ -1,0 +1,15 @@
+.card {
+    max-width: 300px;
+    padding: .3rem;
+    border: 1px solid red;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn {
+    padding: 1rem .7rem;
+    display: block;
+    background: linear-gradient(brown, rgb(202, 202, 201));
+    color: white;
+    text-align: center;
+}
