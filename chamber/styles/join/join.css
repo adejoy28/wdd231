@@ -193,7 +193,7 @@ label button {
     margin: .4rem auto;
     background-color: var(--primary-color);
     color: var(--white-color);
-    animation: come-in 0.2s forwards;
+    animation: come-in 0.8s forwards;
 }
 
 .card:hover {
@@ -235,7 +235,6 @@ label button {
     from {
         opacity: 0;
         transform: translateX(50px);
-        /* transform: translateY(200px); */
     }
 
     to {

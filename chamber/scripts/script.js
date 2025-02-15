@@ -7,6 +7,53 @@ hamBtn.addEventListener('click', () => {
     hamBtn.classList.toggle('open');
 });
 
+// Select elements for the welcome modal
+const welcomeModal = document.querySelector("#welcomeMessage");
+const welcomeMessage = document.querySelector("#message");
+const closeWelcomeModal = document.querySelector("#closeModal");
+
+// Event listener for DOM content loaded
+window.addEventListener("DOMContentLoaded", () => {
+    let message = '';
+    const dateTimeToday = Date.now();
+
+    // Check if the user has visited before
+    if (localStorage.getItem("dateTimeToday") === null) {
+        // First time visit
+        localStorage.setItem("dateTimeToday", dateTimeToday);
+        message = `Welcome! Let us know if you have any questions.`;
+    } else {
+        // Returning visit
+        const gottenDate = new Date(Number(localStorage.getItem("dateTimeToday")));
+        const nowDate = new Date();
+
+        if (gottenDate.getDate() == nowDate.getDate()) {
+            message = "Back so soon! Awesome!";
+        } else {
+            const numberOfDays = calcDays(gottenDate);
+            message = `You last visited ${numberOfDays} days ago.`;
+        }
+    }
+    // Display the welcome modal with the message
+    displayModal(message);
+});
+
+// Function to display the welcome modal
+function displayModal(message) {
+    welcomeModal.showModal();
+    welcomeMessage.textContent = message;
+    closeWelcomeModal.addEventListener("click", () => {
+        welcomeModal.close();
+    });
+}
+
+// Function to calculate the number of days between two dates
+function calcDays(pastDate) {
+    // milliseconds to days constant = 1000 ms/s * 60 s/m * 60 m/h * 24 h/day
+    const msToDays = 86400000;
+    return ((Date.now() - pastDate) / msToDays).toFixed();
+}
+
 
 // WORK LATER ON DYNAMICALLY ADDING ACTIVE TO NAV LINKS
 

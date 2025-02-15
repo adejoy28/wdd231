@@ -222,6 +222,44 @@ header nav.show ul li a.active {
 
 
 
+/* Styles for the welcome message dialog */
+#welcomeMessage {
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 10%;
+    width: 80%;
+    animation: come-in 1s 3s ease-in forwards;
+    /* Animation for the welcome message */
+}
+
+/* Hide the backdrop of the welcome message dialog */
+#welcomeMessage::backdrop {
+    background-color: var(--accent-color-3);
+    opacity: .6;
+}
+
+/* Container for dialog buttons, aligned to the right */
+.dialog-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    float: right;
+    justify-self: end;
+}
+
+@keyframes come-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 footer {
     /* margin-top: 1rem; */
     background-color: var(--primary-color);

@@ -1,9 +1,8 @@
-h1 {
+main h1 {
     text-align: center;
 }
 
 main .container {
-
     margin: 0 auto;
     background-color: var(--white-color);
     display: grid;
@@ -24,31 +23,25 @@ main .container {
         "address"
         "button";
     grid-template-columns: 1fr;
-    /* grid-auto-rows: stretch; */
     border: 1px solid var(--secondary-color);
-    /* max-width: 100%; */
     border-radius: 0.5rem;
-    /* overflow: hidden; */
-    /* padding: 1rem 0; */
     font-size: .8rem;
     gap: .5rem;
+    animation: 1s come-in;
 }
 
 .place-cards .place-title {
     grid-area: title;
-    /* font-size: 1.5rem; */
     font-weight: bold;
     text-align: center;
 }
 
 .place-cards .place-image {
     grid-area: picture;
-    /* display: grid; */
     place-self: center;
 }
 
 .place-cards .place-image img {
-    /* width: 100%; */
     aspect-ratio: 3/2;
     object-fit: contain;
 }
@@ -77,33 +70,6 @@ main .container {
 
 .place-cards .place-btn:hover {
     background-color: var(--secondary-color-lite);
-}
-
-/* Welcome Message Dialog Box Styles */
-#welcomeMessage {
-    border: none;
-    border-radius: 5px;
-    position: absolute;
-    top: 10%;
-    /* right: 10%; */
-    /* transform: translateX(500%); */
-    animation: SlideIn 3s 2s ease-in forwards;
-}
-
-#welcomeMessage::backdrop {
-    display: none;
-}
-
-#welcomeMessage:has(:not(:hover))::backdrop {
-    display: none;
-}
-
-.dialog-container {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 20px;
-    float: right;
-    justify-self: end;
 }
 
 @keyframes SlideIn {

@@ -19,4 +19,13 @@
         text-align: left;
         font-size: .7rem;
     }
+
+    .place-cards .place-image img {
+        filter: grayscale(100%) sepia(20%);
+        transition: filter 0.3s ease-in-out;
+    }
+
+    .place-cards .place-image img:hover {
+        filter: grayscale(0%) sepia(0%);
+    }
 }
