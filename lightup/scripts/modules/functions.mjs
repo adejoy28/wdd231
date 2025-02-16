@@ -36,7 +36,7 @@ const sectionForHome = (data) => {
 };
 
 const fetchAPIForHome = async (searchText, divBookList) => {
-    let SearchUrl = `http://openlibrary.org/subjects/${searchText}.json?published_in=1600-2010`;
+    let SearchUrl = `https://openlibrary.org/subjects/${searchText}.json?published_in=1600-2010`;
     // let SearchUrl = `https://openlibrary.org/search.json?q=${searchText}&limit=10`;
 
     // Run the function in a try-catch block
