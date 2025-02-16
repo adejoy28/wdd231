@@ -8,7 +8,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="This project will serve as ">
+        <meta name="description"
+            content="This project will serve as an online bookstore providing a wide range of books for readers of all ages.">
         <meta name="author" content="John Adebayo ">
         <meta name="keywords" content="Bookstore, JavaScript, Traditional">
 
@@ -34,31 +35,86 @@
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-large.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/index-large.css">
 
         <!-- Stylesheets -->
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+
+        <!-- Scripts used -->
+        <script src="scripts/script.js" type="module"></script>
+        <script src="scripts/index.js" type="module"></script>
+
 
     </head>
 
     <body>
         <header>
-            <h1>Online Bookstore</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Book List</a></li>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-container">
+                <div class="brand-container">
+                    <h1>Online Bookstore</h1>
+                    <button id="smallMenuButton" class="small-menu-button">❌</button>
+                </div>
+                <nav id="navContainer">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Book List</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main>
-
-            <h2>New Collection Books</h2>
-            <div id="book-list" class="book-container"></div>
-            <h2>Featured Books</h2>
-            <div id="featured-book-list" class="book-container"></div>
+            <div id="hero" class="hero">
+                <div class="first-content">
+                    <h2 class="first-content-text">Your Next Big BookStore</h2>
+                    <a href="search.html" class="btn first-content-btn">Search Books Now!</a>
+                </div>
+                <div class="second-content">
+                    <figure>
+                        <img src="images/girl-with-book.png" alt="Girl with book" loading="lazy" width="408"
+                            height="612">
+                    </figure>
+                </div>
+            </div>
+            <h2 class="book-type-header">New Collection Books</h2>
+            <div id="new-book-list" class="book-container">
+            </div>
+            <h2 class="book-type-header">Children</h2>
+            <div id="children-book-list" class="book-container">
+            </div>
+            <h2 class="book-type-header">Novels</h2>
+            <div id="novel-book-list" class="book-container">
+            </div>
+            <h2 class="book-type-header">Science</h2>
+            <div id="science-book-list" class="book-container">
+            </div>
+            <div class="newsletter">
+                <div class="newsletter-container">
+                    <form action="#" method="get" id="newsletterSubscription">
+                        <label for="email">
+                            <input type="email" name="email" id="email" required autocomplete="email">
+                        </label>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
         </main>
+        <footer>
+            <div class="container">
+                <p>&copy; 2023 LightUp Bookstore. All rights reserved.</p>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </footer>
 
         <!-- Scripts starts -->
         <script src="scripts/index.js" type="module"></script>

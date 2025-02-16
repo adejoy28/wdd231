@@ -1,4 +1,37 @@
-.card {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    place-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto, );
+}
+
+.container h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.search-form-container {
+    /* max-width: 90%; */
+}
+
+#search {
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+#search #searchBooks {
+    padding: .5rem;
+    display: block;
+    margin-bottom: .8rem;
+}
+
+/* Search Output and Card design */
+#searchOutput {
+    margin: 0 auto;
+}
+
+/* .card {
     max-width: 300px;
     padding: .3rem;
     border: 1px solid red;
@@ -12,4 +45,4 @@
     background: linear-gradient(brown, rgb(202, 202, 201));
     color: white;
     text-align: center;
-}
+} */

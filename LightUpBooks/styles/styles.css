@@ -5,23 +5,23 @@
     --secondary-color-lite: #35495c;
     --white-color: #f8f8f8;
     --accent-color: #FFEAD6;
-    --accent-color-1: #bccac1;
+    --accent-color-1: rgba(128, 0, 128, 1);
     --accent-color-2: #813640;
-    --accent-color-3: #191D2B;
+    --accent-color-3: rgba(221, 160, 221, .8);
     --accent-color-4: #D8D8D8;
     --background-color: #bccac1;
     --text-color: #2c3e50;
     --card-dark-color: var(--accent-color);
     --header-font: 'Lato', sans-serif;
     --body-font: 'Verdana', sans-serif;
-    --background-color: linear-gradient(90deg, rgba(128, 0, 128, 1) 0%, rgba(221, 160, 221, 1) 100%);
+    --background-color: linear-gradient(180deg, rgba(128, 0, 128, 1) 0%, rgba(221, 160, 221, 1) 100%);
 }
 
 /* General Styles */
 body {
     background: #f4f1ea;
     color: #4a2f27;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -29,32 +29,65 @@ body {
 header {
     background: var(--background-color);
     color: white;
-    padding: 20px;
     text-align: center;
+}
+
+.brand-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    background-color: var(--accent-color-1);
+    /* width: 100%; */
+    display: none;
+    /* padding: 2rem; */
+}
+
+nav.open {
+    display: block;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    display: block;
+    text-transform: capitalize;
+    padding: 1rem 0;
 }
 
-/* Book Container */
-.book-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+nav a:hover,
+nav a:active {
+    color: var(--accent-color-4);
+    font-weight: bold;
+    display: block;
+    background-color: var(--accent-color-3);
+}
+
+
+/* Hambuger Menu Design */
+.small-menu-button {
+    display: block;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--accent-color-4);
+    padding: 10px;
+    height: fit-content;
+}
+
+.small-menu-button:hover {
+    background-color: var(--accent-color);
 }
 
 /* Book Card */
@@ -89,18 +122,37 @@ nav ul li a {
     margin: 5px 0;
 }
 
-.book button {
-    background-color: #6b4226;
-    color: white;
+.book .btn {
+    /* background-color: #6b4226; */
+    color: var(--accent-color-1);
     border: none;
     padding: 10px;
+    display: block;
     cursor: pointer;
     font-size: 16px;
+    text-decoration: none;
 }
 
-.book button:hover {
-    background-color: #4a2f27;
+.book .btn:hover {
+    background-color: var(--accent-color-1);
+    color: var(--white-color)
 }
+
+/* newsletter */
+
+.newsletter {
+    background-color: var(--card-dark-color);
+    margin: 0;
+}
+
+.newsletter .newsletter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    place-content: center;
+    padding: 3rem 0;
+}
+
+#newsletterSubscription {}
 
 /* Footer */
 footer {
@@ -108,5 +160,18 @@ footer {
     background-color: #6b4226;
     color: white;
     padding: 10px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+}
+
+
+@keyframes come-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

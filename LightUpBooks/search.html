@@ -8,7 +8,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="This project will serve as ">
+        <meta name="description"
+            content="This project will serve as an online bookstore providing a wide range of books for readers of all ages.">
         <meta name="author" content="John Adebayo ">
         <meta name="keywords" content="Bookstore, JavaScript, Traditional">
 
@@ -35,33 +36,50 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-large.css">
         <link rel="stylesheet" href="styles/search.css">
+        <link rel="stylesheet" href="styles/search-large.css">
+        <link rel="stylesheet" href="styles/index-large.css">
 
         <!-- Stylesheets -->
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+
+        <!-- Scripts used -->
+        <script src="scripts/script.js" type="module"></script>
+
 
     </head>
 
     <body>
         <header>
-            <h1>Online Bookstore</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="cart.html">Book List</a></li>
-                    <li><a href="search.html">Search</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-container">
+                <div class="brand-container">
+                    <h1>Online Bookstore</h1>
+                    <button id="smallMenuButton" class="small-menu-button">❌</button>
+                </div>
+                <nav id="navContainer">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Book List</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main>
-            <div>
-                <form action="search.html" method="get" id="search">
-                    <input type="search" name="search" id="searchBooks" placeholder="Search books here!" required>
-                    <button type="submit" id="searcghBooks-button">Search</button>
-                </form>
-            </div>
-            <div id="searchOutput">
-
+            <div class="container">
+                <h2>Search</h2>
+                <div class="search-form-container">
+                    <form action="search.html" method="get" id="search">
+                        <input type="search" name="search" id="searchBooks" placeholder="Search books here!" required>
+                        <button type="submit" id="searcghBooks-button">Search</button>
+                    </form>
+                </div>
+                <div id="searchOutput"></div>
             </div>
         </main>
 

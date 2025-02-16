@@ -1,0 +1,36 @@
+@media screen and (min-width:30rem) {
+
+    /* Header */
+    .header-container {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .brand-container {
+        /* max-width: max-content; */
+        place-content: center;
+    }
+
+    nav {
+        display: block;
+        place-content: center;
+    }
+
+    nav ul {
+        list-style: none;
+        flex-direction: row;
+        place-content: center;
+    }
+
+    nav a {
+        padding: 20px 10px;
+    }
+
+
+    /* Hambuger Menu Design */
+    .small-menu-button {
+        display: none;
+    }
+
+
+}

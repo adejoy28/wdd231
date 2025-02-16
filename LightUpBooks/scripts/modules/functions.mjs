@@ -16,4 +16,56 @@ const section = (eachBook) => {
                 `;
 }
 
-export { section }
+const sectionForHome = (data) => {
+    let section = `<section id="book" class="card">
+        <figure class="book">`;
+
+    if (data.cover_edition_key) {
+        section += `<img src="https://covers.openlibrary.org/b/olid/${data.cover_edition_key}-M.jpg" alt="${data.title}" loading="lazy" width="200" title="${data.title}">`
+    } else {
+        section += `<img src="https://placehold.co/200x310" alt="${data.title}" loading="lazy" width="200"  title="${data.title}">`
+
+    }
+    section += `
+                    <a href="https://openlibrary.org/${data.key}" target="_blank" class="btn">Learn
+                        more</a>
+            </figure>
+        </section>`;
+
+    return section;
+};
+
+const fetchAPIForHome = async (searchText, divBookList) => {
+    let SearchUrl = `http://openlibrary.org/subjects/${searchText}.json?published_in=1600-2010`;
+    // let SearchUrl = `https://openlibrary.org/search.json?q=${searchText}&limit=10`;
+
+    // Run the function in a try-catch block
+    try {
+        const response = await fetch(SearchUrl);
+        const data = await response.json();
+        let dataDocs = data.works;//.docs;
+        console.log(dataDocs);
+        let bookCard = "";
+
+        let count = 0;
+        for (let i = 0; i < 4; i++) {
+            const item = dataDocs[i];
+            divBookList.innerHTML += sectionForHome(item);
+        }
+        // dataDocs.forEach(item => {
+        //     while (item.cover_edition_key && !count >= 4) {
+        //         break;
+        //     }
+        //     console.log(item.key)
+        // });
+
+
+        console.log(data.docs);
+        return bookCard;
+
+    } catch (error) {
+        console.log("Error message: " + error);
+    }
+}
+
+export { sectionForHome, fetchAPIForHome }

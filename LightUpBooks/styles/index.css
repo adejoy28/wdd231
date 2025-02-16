@@ -1,0 +1,66 @@
+/* Hero Section */
+.hero {
+    margin: 0 auto;
+    min-height: 10rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    max-width: 1200px;
+}
+
+.first-content,
+.second-content {
+    width: 100%;
+}
+
+.first-content {
+    min-height: 30vh;
+    place-content: center;
+    display: grid;
+    gap: 2rem;
+}
+
+.first-content-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 800;
+}
+
+.first-content-btn {
+    padding: 10px;
+    background-color: var(--accent-color-1);
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    max-width: max-content;
+    border-radius: 5px;
+}
+
+.second-content {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+    place-content: start;
+}
+
+.second-content img {
+    max-width: 80%;
+    margin: -1rem auto;
+    animation: come-in 2s forwards;
+    object-fit: contain;
+    padding: 0;
+}
+
+/* Book Container */
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.book-type-header {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 20px;
+    border-bottom: 1px solid var(--background-color);
+}

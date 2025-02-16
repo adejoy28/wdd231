@@ -1,0 +1,13 @@
+   @media screen and (min-width:30rem) {
+
+       /* Hero Section */
+       .hero {
+           grid-template-columns: 1fr 1fr;
+           min-height: 50vh;
+       }
+
+       .second-content img {
+           max-width: 80%;
+           margin: 0 auto;
+       }
+   }

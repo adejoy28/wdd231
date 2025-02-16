@@ -35,8 +35,8 @@
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-large.css">
-        <link rel="stylesheet" href="styles/contact.css">
-        <link rel="stylesheet" href="styles/contact-large.css">
+        <link rel="stylesheet" href="styles/books.css">
+        <link rel="stylesheet" href="styles/books-large.css">
 
         <!-- Stylesheets -->
 
@@ -47,7 +47,7 @@
 
         <!-- Scripts used -->
         <script src="scripts/script.js" type="module"></script>
-        <script src="scripts/index.js" type="module"></script>
+        <script src="scripts/books.js" type="module"></script>
 
 
     </head>
@@ -71,25 +71,40 @@
         </header>
         <main>
             <div class="container">
-                <div class="title">
-                    <h2>Contact Us</h2>
-                    <p>Leave us a message:</p>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <img src="images/map.jpg" style="width:100%" alt="map" loading="lazy">
+                <section class="book-container">
+                    <div class="book">
+                        <img src="images/map.jpg" alt="Book 1" width="200" height="300">
+                        <h3>Book Title 1</h3>
+                        <button class="add-to-cart" data-title="Book Title 1" data-price="10.99">Learn More</button>
                     </div>
-                    <div class="column">
-                        <form action="review.html" method="get">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name..">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your e-mail..">
-                            <label for="subject">Subject</label>
-                            <textarea id="subject" name="subject" placeholder="Write something.."
-                                style="height:170px"></textarea>
-                            <input type="submit" value="Get in touch">
-                        </form>
+
+                    <div class="book">
+                        <img src="book2.jpg" alt="Book 2">
+                        <h3>Book Title 2</h3>
+                        <p>$12.99</p>
+                        <button class="add-to-cart" data-title="Book Title 2" data-price="12.99">Add to Cart</button>
                     </div>
+                </section>
+
+            </div>
+
+            <!-- Shopping Cart -->
+            <div class="cart" id="cart">
+                <div class="cart-header">
+                    <h2>Shopping Cart</h2>
+                    <button id="close-cart">&times;</button>
                 </div>
+                <ul class="cart-items" id="cart-items"></ul>
+                <div class="cart-footer">
+                    <button id="checkout">Checkout</button>
+                </div>
+            </div>
+
         </main>
+        <footer>
+            <p>&copy; 2025 Classic Bookstore</p>
+        </footer>
+
+    </body>
+
+</html>
