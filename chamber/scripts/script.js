@@ -26,7 +26,8 @@ window.addEventListener("DOMContentLoaded", () => {
         const gottenDate = new Date(Number(localStorage.getItem("dateTimeToday")));
         const nowDate = new Date();
 
-        if (gottenDate.getDate() == nowDate.getDate()) {
+        if (gottenDate.getDate() === nowDate.getDate() && gottenDate.getMonth() === nowDate.getMonth()) {
+            // alert(nowDate.getMonth())
             message = "Back so soon! Awesome!";
         } else {
             const numberOfDays = calcDays(gottenDate);
