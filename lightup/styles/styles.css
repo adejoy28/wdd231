@@ -34,10 +34,22 @@ header {
 }
 
 .brand-container {
-    padding: 1rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.brand-container a {
+    max-width: 150px;
+    align-items: left;
+    padding: 0;
+}
+
+.brand-container a img {
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 
 nav {

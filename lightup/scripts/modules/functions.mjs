@@ -66,7 +66,7 @@ const fetchAPIForHome = async (SearchUrl, divBookList, limit) => {
         // });
 
 
-        console.log(data.docs);
+        // console.log(data.docs);
         return bookCard;
 
     } catch (error) {

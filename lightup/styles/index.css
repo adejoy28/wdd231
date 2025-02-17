@@ -14,10 +14,11 @@
 }
 
 .first-content {
-    min-height: 30vh;
+    /* min-height: vh; */
     place-content: center;
     display: grid;
     gap: 2rem;
+    padding: 3rem 0 1rem 2rem;
 }
 
 .first-content-text {
@@ -37,7 +38,7 @@
 
 .second-content {
     padding: 0;
-    margin: 0;
+    margin-top: -100px;
     /* border: 1px solid red; */
     place-content: start;
 }

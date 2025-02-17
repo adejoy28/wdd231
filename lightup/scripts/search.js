@@ -13,7 +13,7 @@ searchForm.addEventListener("submit", (event) => {
 
     console.log(searchAppendable);
     fetchAPI(searchAppendable).then(result => {
-        output.innerHTML = `<h3>Search results for "${searchAppendable}"`;
+        output.innerHTML = `<h3 class="search-result-title">Search results for "${searchValue}:"</h3>`;
         output.innerHTML += result;
     });
     // output.innerHTML = `<h1>${searchText.value}</h1>`;
@@ -25,7 +25,7 @@ async function fetchAPI(searchText) {
     // let searchText = searchAppendable;
     let SearchUrl = `https://openlibrary.org/search.json?q=${searchText}&limit=20`;
     // SearchUrl += searchText;
-    console.log(SearchUrl);
+    // console.log(SearchUrl);
 
     const response = await fetch(SearchUrl);
     const data = await response.json();
