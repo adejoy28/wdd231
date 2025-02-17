@@ -1,5 +1,14 @@
    @media screen and (min-width:30rem) {
 
+       html {
+           scroll-snap-type: y mandatory;
+       }
+
+       body>* {
+           scroll-snap-align: start;
+       }
+
+
        /* Hero Section */
        .hero {
            grid-template-columns: 1fr 1fr;

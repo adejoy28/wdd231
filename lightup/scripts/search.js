@@ -1,3 +1,4 @@
+import { sectionForHome } from "./modules/functions.mjs";
 const searchBtb = document.querySelector("#searcghBooks-button");
 // console.log(searchAppendable
 const output = document.querySelector("#searchOutput");
@@ -8,11 +9,12 @@ searchForm.addEventListener("submit", (event) => {
     const searchInput = document.querySelector("#searchBooks");
     const searchValue = searchInput.value;
     const searchAppendable = searchValue.trim(" ").replaceAll(" ", "+");
-    alert(searchAppendable);
+    // alert(searchAppendable);
 
     console.log(searchAppendable);
     fetchAPI(searchAppendable).then(result => {
-        output.innerHTML = result;
+        output.innerHTML = `<h3>Search results for "${searchAppendable}"`;
+        output.innerHTML += result;
     });
     // output.innerHTML = `<h1>${searchText.value}</h1>`;
 })
@@ -35,22 +37,16 @@ async function fetchAPI(searchText) {
         for (let bookIndex = 0; bookIndex < 20; bookIndex++) {
             const eachBook = data.docs[bookIndex];
 
-            const section = `
-                        <section class="card">
-                        <h3>${bookIndex + 1} ${eachBook.title}</h3>
-                        <figure>
-                            <img src="https://covers.openlibrary.org/b/olid/${eachBook.cover_edition_key}-M.jpg" alt="Book Cover" loading="lazy" width="200"
-                                height="300">
-                            <figcaption>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, et quas.
-                            </figcaption>
-                        </figure>
-    
-                        <p>Arthur: ${eachBook.author_name[0]}</p>
-                        <a href="https://openlibrary.org/${eachBook.key}" target="_blank" class="btn">Learn more</a>
-                    </section>
-                `;
-            bookCard += section;
+            // const section = `
+            //             <section class="card">
+            //             <figure class="book">
+            //                 <img src="https://covers.openlibrary.org/b/olid/${eachBook.cover_edition_key}-M.jpg" alt="Book Cover" loading="lazy" width="200"
+            //                     height="300">
+            //                     <a href="https://openlibrary.org/${eachBook.key}" target="_blank" class="btn">Learn more</a>
+            //             </figure>    
+            //         </section>
+            //     `;
+            bookCard += sectionForHome(eachBook);
         }
         // });
     } else if (data.docs.length === 1) {

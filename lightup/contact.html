@@ -36,7 +36,7 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/styles-large.css">
         <link rel="stylesheet" href="styles/contact.css">
-        <link rel="stylesheet" href="styles/contact-large.css">
+        <!-- <link rel="stylesheet" href="styles/contact-large.css"> -->
 
         <!-- Stylesheets -->
 
@@ -47,7 +47,7 @@
 
         <!-- Scripts used -->
         <script src="scripts/script.js" type="module"></script>
-        <script src="scripts/index.js" type="module"></script>
+        <script src="scripts/contact.js" type="module"></script>
 
 
     </head>
@@ -64,7 +64,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="books.html">Book List</a></li>
                         <li><a href="search.html">Search</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -75,7 +75,7 @@
                     <h2>Contact Us</h2>
                     <p>Leave us a message:</p>
                 </div>
-                <div class="row">
+                <div id="formContainer" class="row">
                     <div class="column">
                         <img src="images/map.jpg" style="width:100%" alt="map" loading="lazy">
                     </div>
@@ -92,4 +92,44 @@
                         </form>
                     </div>
                 </div>
+                <div class="newsletter">
+                    <div class="newsletter-container">
+                        <form action="#" method="get" id="newsletterSubscription">
+                            <label for="email">
+                                <input type="email" name="email" id="email" placeholder="Type your email to subscribe"
+                                    required autocomplete="email">
+                            </label>
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+                <dialog id="subscriptionModal">
+                    <button id="closeModal">❌</button>
+                    <h3>You've successfully subscribed</h3>
+                    <p>You will now receive emails from our marketting team</p>
+                </dialog>
         </main>
+        <footer>
+            <div class="top-footer-container">
+                <!-- <figure>
+                    <img src="" alt="">
+                </figure> -->
+                <h3>LightUp BookStore</h3>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="references">References</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="search.html">Search</a></li>
+                    </ul>
+                </nav>
+                <div class="socials">
+                    <img src="" alt="" width="30" height="30" loading="lazy">
+                    <img src="" alt="" width="30" height="30" loading="lazy">
+                    <img src="" alt="" width="30" height="30" loading="lazy">
+                </div>
+            </div>
+            <p>&copy; <span id="Year">2025</span> John Adebayo. All rights reserved</p>
+        </footer>
+    </body>
+
+</html>

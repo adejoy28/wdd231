@@ -1,14 +1,17 @@
-import { sectionForHome, fetchAPIForHome } from "./modules/functions.mjs"
+import { SearchUrl, fetchAPIForHome } from "./modules/functions.mjs"
 {/* <div id="book-list" class="book-container"> */ }
 const newBookList = document.querySelector("#new-book-list");
 const childrenBookList = document.querySelector("#children-book-list");
 const novelBookList = document.querySelector("#novel-book-list");
 const scienceBookList = document.querySelector("#science-book-list");
 
-fetchAPIForHome("wealth", newBookList);
-fetchAPIForHome("children's_fiction", childrenBookList);
-fetchAPIForHome("novel", novelBookList);
-fetchAPIForHome("programming", scienceBookList);
+
+
+
+fetchAPIForHome(SearchUrl("wealth"), newBookList);
+fetchAPIForHome(SearchUrl("children's_fiction"), childrenBookList);
+fetchAPIForHome(SearchUrl("novel"), novelBookList);
+fetchAPIForHome(SearchUrl("programming"), scienceBookList);
 
 
 

@@ -48,6 +48,7 @@
 
         <!-- Scripts used -->
         <script src="scripts/script.js" type="module"></script>
+        <script src="scripts/search.js" type="module"></script>
 
 
     </head>
@@ -63,7 +64,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="books.html">Book List</a></li>
-                        <li><a href="search.html">Search</a></li>
+                        <li><a href="search.html" class="active">Search</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -76,17 +77,50 @@
                 <div class="search-form-container">
                     <form action="search.html" method="get" id="search">
                         <input type="search" name="search" id="searchBooks" placeholder="Search books here!" required>
-                        <button type="submit" id="searcghBooks-button">Search</button>
+                        <button type="submit" id="searchBooks-button">Search</button>
                     </form>
                 </div>
                 <div id="searchOutput"></div>
             </div>
+            <div class="newsletter">
+                <div class="newsletter-container">
+                    <form action="#" method="get" id="newsletterSubscription">
+                        <label for="email">
+                            <input type="email" name="email" id="email" placeholder="Type your email to subscribe"
+                                required autocomplete="email">
+                        </label>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+            <dialog id="subscriptionModal">
+                <button id="closeModal">❌</button>
+                <h3>You've successfully subscribed</h3>
+                <p>You will now receive emails from our marketting team</p>
+            </dialog>
         </main>
+        <footer>
+            <div class="top-footer-container">
+                <!-- <figure>
+                    <img src="" alt="">
+                </figure> -->
+                <h3>LightUp BookStore</h3>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="references">References</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="search.html">Search</a></li>
+                    </ul>
+                </nav>
+                <div class="socials">
+                    <img src="" alt="" width="30" height="30" loading="lazy">
+                    <img src="" alt="" width="30" height="30" loading="lazy">
+                    <img src="" alt="" width="30" height="30" loading="lazy">
+                </div>
+            </div>
+            <p>&copy; <span id="Year">2025</span> John Adebayo. All rights reserved</p>
+        </footer>
 
-        <!-- Scripts starts -->
-        <!-- <script src="scripts/index.js" type="module"></script> -->
-        <script src="scripts/search.js" type="module"></script>
-        <!-- Scripts ends -->
     </body>
 
 </html>

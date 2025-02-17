@@ -13,6 +13,8 @@
 
 .search-form-container {
     /* max-width: 90%; */
+    margin: 1rem auto;
+    min-height: 20vh;
 }
 
 #search {
@@ -24,11 +26,25 @@
     padding: .5rem;
     display: block;
     margin-bottom: .8rem;
+    min-width: 300px;
 }
+
+#searchBooks-button {
+    float: right;
+    background-color: var(--primary-color);
+    color: white;
+    /* outline-offset: -5px solid white; */
+    border: none;
+    padding: .7rem .5rem;
+}
+
 
 /* Search Output and Card design */
 #searchOutput {
-    margin: 0 auto;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
 }
 
 /* .card {

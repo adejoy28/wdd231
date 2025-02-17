@@ -45,6 +45,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
 
+        <!-- Font awesone -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
         <!-- Scripts used -->
         <script src="scripts/script.js" type="module"></script>
         <script src="scripts/index.js" type="module"></script>
@@ -56,12 +60,12 @@
         <header>
             <div class="header-container">
                 <div class="brand-container">
-                    <h1>Online Bookstore</h1>
-                    <button id="smallMenuButton" class="small-menu-button">❌</button>
+                    <h1>LightUp BookStore</h1>
+                    <button id="smallMenuButton" class="small-menu-button"><i class="fa-solid fa-bars"></i></button>
                 </div>
                 <nav id="navContainer">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="books.html">Book List</a></li>
                         <li><a href="search.html">Search</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -99,21 +103,42 @@
                 <div class="newsletter-container">
                     <form action="#" method="get" id="newsletterSubscription">
                         <label for="email">
-                            <input type="email" name="email" id="email" required autocomplete="email">
+                            <input type="email" name="email" id="email" placeholder="Type your email to subscribe"
+                                required autocomplete="email">
                         </label>
                         <input type="submit" value="Subscribe">
                     </form>
                 </div>
             </div>
+            <dialog id="subscriptionModal">
+                <button id="closeModal">❌</button>
+                <h3>You've successfully subscribed</h3>
+                <p>You will now receive emails from our marketting team</p>
+            </dialog>
         </main>
         <footer>
-            <div class="container">
-                <p>&copy; 2023 LightUp Bookstore. All rights reserved.</p>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                </ul>
+            <div class="top-footer-container">
+                <!-- <figure>
+                    <img src="" alt="">
+                </figure> -->
+                <h3>LightUp BookStore</h3>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="siteplan.html">References</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="search.html">Search</a></li>
+                    </ul>
+                </nav>
+                <div class="socials">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com"><i class="fa-brands fa-x"></i></a>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- <img src="" alt="" width="30" height="30" loading="lazy">
+                    <img src="" alt="" width="30" height="30" loading="lazy">
+                    <img src="" alt="" width="30" height="30" loading="lazy"> -->
+                </div>
             </div>
+            <p>&copy; <span id="Year">2025</span> John Adebayo. All rights reserved</p>
         </footer>
 
         <!-- Scripts starts -->

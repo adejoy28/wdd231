@@ -15,10 +15,10 @@
 }
 
 /* Style inputs */
-input[type=text],
-input[type=email],
-select,
-textarea {
+.column input[type=text],
+.column input[type=email],
+.column select,
+.column textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #5e5454;
@@ -28,7 +28,7 @@ textarea {
     outline: none;
 }
 
-input[type=submit] {
+.column input[type=submit] {
     background-color: #6c6d6d;
     color: white;
     padding: 12px 20px;
@@ -36,7 +36,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+.column input[type=submit]:hover {
     background-color: var(--accent-color-1);
 }
 
@@ -59,7 +59,7 @@ input[type=submit]:hover {
 @media screen and (min-width: 600px) {
 
     .column,
-    input[type=submit] {
+    .column input[type=submit] {
         max-width: 600px;
         margin: 0 auto;
         width: 100%;

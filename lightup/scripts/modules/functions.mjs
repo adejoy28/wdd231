@@ -23,7 +23,7 @@ const sectionForHome = (data) => {
     if (data.cover_edition_key) {
         section += `<img src="https://covers.openlibrary.org/b/olid/${data.cover_edition_key}-M.jpg" alt="${data.title}" loading="lazy" width="200" title="${data.title}">`
     } else {
-        section += `<img src="https://placehold.co/200x310" alt="${data.title}" loading="lazy" width="200"  title="${data.title}">`
+        section += `<img src="https://placehold.co/200x310?text=${data.title}" alt="${data.title}" loading="lazy" width="200"  title="${data.title}">`
 
     }
     section += `
@@ -33,10 +33,15 @@ const sectionForHome = (data) => {
         </section>`;
 
     return section;
-};
+}
 
-const fetchAPIForHome = async (searchText, divBookList) => {
-    let SearchUrl = `https://openlibrary.org/subjects/${searchText}.json?published_in=1600-2010`;
+
+
+const SearchUrl = (searchText) => `https://openlibrary.org/subjects/${searchText}.json?published_in=1600-2010`;
+
+
+
+const fetchAPIForHome = async (SearchUrl, divBookList, limit) => {
     // let SearchUrl = `https://openlibrary.org/search.json?q=${searchText}&limit=10`;
 
     // Run the function in a try-catch block
@@ -48,7 +53,8 @@ const fetchAPIForHome = async (searchText, divBookList) => {
         let bookCard = "";
 
         let count = 0;
-        for (let i = 0; i < 4; i++) {
+        limit = limit || 4
+        for (let i = 0; i < limit; i++) {
             const item = dataDocs[i];
             divBookList.innerHTML += sectionForHome(item);
         }
@@ -68,4 +74,4 @@ const fetchAPIForHome = async (searchText, divBookList) => {
     }
 }
 
-export { sectionForHome, fetchAPIForHome }
+export { sectionForHome, SearchUrl, fetchAPIForHome }

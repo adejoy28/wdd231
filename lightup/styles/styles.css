@@ -3,15 +3,15 @@
     --primary-color: #191D2B;
     --secondary-color: #2c3e50;
     --secondary-color-lite: #35495c;
-    --white-color: #f8f8f8;
+    --white-color: #fff;
     --accent-color: #FFEAD6;
-    --accent-color-1: rgba(128, 0, 128, 1);
+    --accent-color-1: #800080;
     --accent-color-2: #813640;
-    --accent-color-3: rgba(221, 160, 221, .8);
+    --accent-color-3: #DDA0DD;
     --accent-color-4: #D8D8D8;
+    --footer-color: #1F2F16;
     --background-color: #bccac1;
     --text-color: #2c3e50;
-    --card-dark-color: var(--accent-color);
     --header-font: 'Lato', sans-serif;
     --body-font: 'Verdana', sans-serif;
     --background-color: linear-gradient(180deg, rgba(128, 0, 128, 1) 0%, rgba(221, 160, 221, 1) 100%);
@@ -19,10 +19,11 @@
 
 /* General Styles */
 body {
-    background: #f4f1ea;
-    color: #4a2f27;
+    background: var(--white-color);
     margin: 0 auto;
     padding: 0;
+    position: relative;
+    font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
 /* Header */
@@ -67,7 +68,7 @@ nav a {
 }
 
 nav a:hover,
-nav a:active {
+nav a.active {
     color: var(--accent-color-4);
     font-weight: bold;
     display: block;
@@ -94,9 +95,10 @@ nav a:active {
 .book {
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 15px;
-    margin: 15px;
-    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    width: 120px;
+    flex-grow: 2;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -129,7 +131,7 @@ nav a:active {
     padding: 10px;
     display: block;
     cursor: pointer;
-    font-size: 16px;
+    font-size: .8rem;
     text-decoration: none;
 }
 
@@ -142,28 +144,134 @@ nav a:active {
 
 .newsletter {
     background-color: var(--card-dark-color);
+    background-image: url("../images/subscribe-bg.jpg");
+    filter: opacity(80%);
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    background-size: cover;
     margin: 0;
 }
 
 .newsletter .newsletter-container {
-    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.8);
     margin: 0 auto;
     place-content: center;
-    padding: 3rem 0;
+    padding: 4rem 0;
+    text-align: center;
 }
 
-#newsletterSubscription {}
+#newsletterSubscription input {
+    padding: .4rem;
+}
 
 /* Footer */
 footer {
-    text-align: center;
-    background-color: #6b4226;
+    background-color: #3d3939;
+    color: var(--white-color);
+}
+
+.top-footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr .5fr;
+    grid-template-areas:
+        "brand socials"
+        "links links";
+    padding: 1rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.top-footer-container h3 {
+    grid-area: brand;
+    padding: 1rem 0;
+}
+
+.top-footer-container nav.nav {
+    grid-area: links;
+    display: block;
+    background-color: transparent;
+}
+
+.top-footer-container nav.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-footer-container nav.nav ul a {
+    font-weight: 300;
+    text-decoration: underline;
+    padding: 1rem;
+}
+
+.top-footer-container nav.nav ul a:hover {
+    font-weight: 500;
+    background-color: transparent;
+    color: var(--accent-color-3);
+}
+
+.top-footer-container .socials {
+    grid-area: socials;
+    display: flex;
+    justify-content: flex-end;
+    /* max-width: 80%; */
+    padding: 1rem 0;
+}
+
+.top-footer-container .socials a {
     color: white;
-    padding: 10px;
-    /* margin-top: 20px; */
+    padding-left: .7rem;
+}
+
+.top-footer-container .socials a:hover {
+    cursor: pointer;
+    color: var(--accent-color-3);
+}
+
+footer>p {
+    display: block;
+    text-align: center;
+    padding: 1rem .5rem;
+    font-size: .8rem;
+    background-color: #4e4e4e;
 }
 
 
+
+
+/* Newsletter Subscription Modal */
+#subscriptionModal {
+    min-width: 80%;
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 5rem;
+}
+
+
+
+#subscriptionModal::backdrop {
+    background-color: rgba(7, 7, 7, 0.836);
+}
+
+#subscriptionModal #closeModal {
+    float: right;
+    outline: none;
+    background-color: transparent;
+    border: none;
+
+}
+
+#subscriptionModal #closeModal {
+    border: 1px solid var(--background-color);
+}
+
+/* #subscriptionModal {} */
+
+
+/* Keyframes for animation */
 @keyframes come-in {
     from {
         opacity: 0;
