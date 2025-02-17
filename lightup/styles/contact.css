@@ -59,6 +59,7 @@
 .thank-you {
     place-content: center;
     text-align: center;
+    min-height: 50vh;
 }
 
 .thank-you .thank-you-title {

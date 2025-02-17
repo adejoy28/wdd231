@@ -200,7 +200,7 @@ footer {
 
 .top-footer-container nav.nav ul a {
     font-weight: 300;
-    text-decoration: underline;
+    text-decoration: none;
     padding: 1rem;
 }
 
