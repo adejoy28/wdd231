@@ -7,7 +7,7 @@
     --accent-color: #FFEAD6;
     --accent-color-1: #800080;
     --accent-color-2: #813640;
-    --accent-color-3: #DDA0DD;
+    --accent-color-3: #884088;
     --accent-color-4: #D8D8D8;
     --footer-color: #1F2F16;
     --background-color: #bccac1;
@@ -81,7 +81,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: var(--accent-color-4);
+    color: var(--white-color);
     font-weight: bold;
     display: block;
     background-color: var(--accent-color-3);
@@ -253,16 +253,18 @@ footer>p {
 
 /* Newsletter Subscription Modal */
 #subscriptionModal {
-    min-width: 80%;
-    max-width: 300px;
+    max-width: 600px;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2rem 5rem;
+    padding: 2rem 1rem;
 }
 
-
+#subscriptionModal h3 {
+    margin: 2rem 0;
+}
 
 #subscriptionModal::backdrop {
     background-color: rgba(7, 7, 7, 0.836);
