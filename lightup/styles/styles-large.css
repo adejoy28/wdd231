@@ -40,6 +40,27 @@
         width: 250px;
     }
 
+
+    /* Book Details design */
+
+
+    #bookDetails {
+        grid-template-columns: 1fr 1.5fr;
+        /* border: 1px solid #ddd; */
+        max-width: 600px;
+        grid-template-areas:
+            "image title"
+            "image author"
+            "image description"
+            "image price"
+            "image language"
+            "image pages"
+            "image edition"
+            "image btn"
+        ;
+    }
+
+
     /* Footer Design */
 
 

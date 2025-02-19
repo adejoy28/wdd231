@@ -161,6 +161,81 @@ nav a.active {
     color: var(--white-color)
 }
 
+
+/* Book details modal design */
+
+#bookDetails {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* border: 1px solid #ddd; */
+    min-width: 300px;
+    grid-template-areas:
+        "title"
+        "image"
+        "author"
+        "description"
+        "price"
+        "pages"
+        "language"
+        /* "publisher" */
+        "edition"
+        "btn"
+    ;
+    gap: 1rem;
+}
+
+#bookImage {
+    grid-area: image;
+    place-content: center;
+    padding: 1rem;
+}
+
+#bookTitle {
+    grid-area: title;
+}
+
+#bookAuthor {
+    grid-area: author;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+#bookAuthor img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#bookAuthor .author-name {
+    align-self: center;
+}
+
+#bookDescription {
+    grid-area: description;
+}
+
+#bookPrice {
+    grid-area: price;
+}
+
+#bookPages {
+    grid-area: pages;
+}
+
+#bookLanguages {
+    grid-area: language;
+}
+
+#bookEdition {
+    grid-area: edition;
+}
+
+#bookButton {
+    grid-area: btn;
+}
+
+
+
 /* newsletter */
 
 .newsletter {

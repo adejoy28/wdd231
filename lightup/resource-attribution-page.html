@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>LightUp Bookstore</title>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description"
+            content="This project will serve as an online bookstore providing a wide range of books for readers of all ages.">
+        <meta name="author" content="John Adebayo">
+        <meta name="keywords" content="Resource Attribution, Images, Icons, Fonts">
+
+        <!-- Essential META Tags -->
+        <meta property="og:title" content="Resource Attribution Page">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="https://">
+        <meta property="og:url" content="https://adejoy28.github.io/wdd231/LightUpBooks/resource-attribution-page.html">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!-- Non-Essential, But Recommended -->
+        <meta property="og:description"
+            content="Attribution for images, icons, and fonts used in the LightUp Bookstore project.">
+        <meta property="og:site_name" content="LightUp Bookstore">
+        <meta name="twitter:image:alt" content="LightUp Bookstore">
+
+        <!-- Non-Essential, But Required for Analytics -->
+        <meta property="fb:app_id" content="your_app_id">
+        <meta name="twitter:site" content="@website-username">
+
+        <!-- Social Sharing ends -->
+
+        <!-- Stylesheets used -->
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/styles-large.css">
+        <link rel="stylesheet" href="styles/resource-attribution.css">
+        <link rel="stylesheet" href="styles/resource-attribution-large.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+        <!-- Scripts used -->
+        <script src="scripts/script.js" type="module"></script>
+        <script src="scripts/resource-attribution.js" type="module"></script>
+
+    </head>
+
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="brand-container">
+                    <a href="index.html"><img src="images/logo.png" alt="Brand Logo" width="254" height="122"
+                            loading="eager"></a>
+                    <button id="smallMenuButton" class="small-menu-button"></button>
+                </div>
+                <nav id="navContainer">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Book List</a></li>
+                        <li><a href="search.html" class="active">Search</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h2>Resources Attribution</h2>
+                <section>
+                    <h3>Images</h3>
+                    <ul>
+                        <li>"Girl-with-book" by <a href="https://unsplash.com/@icons8">Icons8 Team</a> from
+                            Unsplash
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Icons</h3>
+                    <ul>
+                        <li>Icons from <a href="https://fontawesome.com/">Font Awesome</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Fonts</h3>
+                    <ul>
+                        <li>Font by <a href="https://fonts.googleapis.com/css2?family=Lato">Roboto</a> from Google
+                            Fonts
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>API Intergration</h3>
+                    <ul>
+                        <li>API from <a href="https://OpenLibrary.org"></a>OpenLibrary
+                        </li>
+                    </ul>
+                </section>
+
+
+                <!-- Typically footer starts from here! -->
+                <div class="newsletter">
+                    <div class="newsletter-container">
+                        <form action="#" method="get" id="newsletterSubscription">
+                            <label for="email">
+                                <input type="email" name="email" id="email" placeholder="Type your email to subscribe"
+                                    required autocomplete="email">
+                            </label>
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+                <dialog id="subscriptionModal">
+                    <button id="closeModal">❌</button>
+                    <!-- <h3>You've successfully subscribed</h3>
+                <p>You will now receive emails from our marketting team</p> -->
+                </dialog>
+        </main>
+        <footer>
+            <div class="top-footer-container">
+                <!-- <figure>
+                    <img src="" alt="">
+                </figure> -->
+                <h3>LightUp BookStore</h3>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="resource-attribution-page.html">Resources</a></li>
+                        <li><a href="siteplan.html">Site Plan</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="socials">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com"><i class="fa-brands fa-x"></i></a>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- <img src="" alt="" width="30" height="30" loading="lazy">
+                    <img src="" alt="" width="30" height="30" loading="lazy">
+                    <img src="" alt="" width="30" height="30" loading="lazy"> -->
+                </div>
+            </div>
+            <p>&copy; <span id="Year">2025</span> John Adebayo. All rights reserved</p>
+        </footer>
+
+        <!-- Scripts starts -->
+        <script src="scripts/index.js" type="module"></script>
+        <!-- Scripts ends -->
+    </body>
+
+</html>

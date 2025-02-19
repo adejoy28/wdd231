@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-    margin: 0 auto;
+    margin: 0 auto 2rem;
     min-height: 10rem;
     display: grid;
     justify-content: center;
@@ -44,7 +44,7 @@
 }
 
 .second-content img {
-    max-width: 80%;
+    width: 80%;
     margin: -1rem auto;
     animation: come-in 2s forwards;
     object-fit: contain;

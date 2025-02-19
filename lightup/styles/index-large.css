@@ -15,8 +15,13 @@
            min-height: 50vh;
        }
 
+       .second-content {
+           margin: 0;
+       }
+
        .second-content img {
            max-width: 80%;
-           margin: 0 auto;
+           margin: 0rem auto;
+           z-index: 9;
        }
    }
