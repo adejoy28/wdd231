@@ -105,10 +105,15 @@ header>h2 {
 }
 
 p,
-h4 span {
+h4 {
     font-family: var(--paragraph-font);
     color: var(--paragraph-color);
     padding: 1em;
+}
+
+h4 span {
+    color: var(--primary-color);
+    padding: 0 1em;
 }
 
 .fancy {
@@ -163,7 +168,7 @@ ul li p {
 }
 
 p.colored {
-    background-color: var(--paragraph-background-color);
+    background-color: var(--accent2-color);
     color: var(--paragraph-color-on-color);
 }
 
@@ -186,12 +191,13 @@ nav a {
     padding: 10px;
 }
 
-nav a:link,
-nav a:visited {
-    color: var(--nav-link-color);
+nav a:link {
+    color: var(--primary-color);
+
 }
 
-nav a:hover {
+nav a:hover,
+nav a:visited {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
 }
@@ -263,4 +269,8 @@ nav a:hover {
     flex-direction: rows;
     justify-content: center;
     align-items: center;
+}
+
+h2~h3 {
+    color: var(--accent3-color);
 }
