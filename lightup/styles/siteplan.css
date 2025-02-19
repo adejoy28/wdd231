@@ -79,7 +79,7 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font);
-    color: var(--headline-color-on-white);
+    color: var(--primary-color);
 }
 
 h2 {
@@ -113,7 +113,7 @@ h4 span {
 
 .fancy {
     font-family: var(--fancy-font);
-    color: var(--primary-color);
+    color: var(--accent3-color);
     padding: 1em;
 }
 
