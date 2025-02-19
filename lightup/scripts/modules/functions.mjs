@@ -18,6 +18,8 @@ const section = (eachBook) => {
 
 const sectionForHome = (data) => {
     let section = `<section id="book" class="card">
+
+        <h3>${data.title}</h3>
         <figure class="book">`;
 
     if (data.cover_edition_key) {

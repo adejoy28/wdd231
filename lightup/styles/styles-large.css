@@ -35,6 +35,11 @@
 
 
     /* Book Card */
+    .card {
+        max-width: 270px;
+    }
+
+
     .book {
         flex-shrink: 1;
         width: 250px;

@@ -113,6 +113,18 @@ nav a.active {
 }
 
 /* Book Card */
+.card {
+    max-width: 130px;
+}
+
+.card h3 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 8px;
+    max-width: fit-content;
+    word-wrap: break-word;
+}
+
 .book {
     background-color: #fff;
     border: 1px solid #ddd;
