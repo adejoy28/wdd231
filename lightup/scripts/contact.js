@@ -9,7 +9,6 @@ if (form) {
         const email = document.querySelector("#email");
         const content = document.querySelector("#content");
 
-        alert(`${email.value}, ${userName.value}, ${content.value}`);
         formContainer.innerHTML = `               <div class="thank-you">
                     <h1 class="thank-you_title">THANK YOU!</h1>
                     <i class="fa fa-check thank-you-checkmark" id="checkmark"></i>

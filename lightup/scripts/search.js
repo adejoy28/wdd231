@@ -9,23 +9,17 @@ searchForm.addEventListener("submit", (event) => {
     const searchInput = document.querySelector("#searchBooks");
     const searchValue = searchInput.value;
     const searchAppendable = searchValue.trim(" ").replaceAll(" ", "+");
-    // alert(searchAppendable);
 
-    console.log(searchAppendable);
     fetchAPI(searchAppendable).then(result => {
         output.innerHTML = `<h3 class="search-result-title">Search results for "${searchValue}:"</h3>`;
         output.innerHTML += result;
     });
-    // output.innerHTML = `<h1>${searchText.value}</h1>`;
 })
 
 
 
 async function fetchAPI(searchText) {
-    // let searchText = searchAppendable;
     let SearchUrl = `https://openlibrary.org/search.json?q=${searchText}&limit=20`;
-    // SearchUrl += searchText;
-    // console.log(SearchUrl);
 
     const response = await fetch(SearchUrl);
     const data = await response.json();
@@ -33,22 +27,10 @@ async function fetchAPI(searchText) {
     let bookCard = "";
 
     if (data.docs.length > 1) {
-        // data.docs.forEach(book => {
         for (let bookIndex = 0; bookIndex < 20; bookIndex++) {
             const eachBook = data.docs[bookIndex];
-
-            // const section = `
-            //             <section class="card">
-            //             <figure class="book">
-            //                 <img src="https://covers.openlibrary.org/b/olid/${eachBook.cover_edition_key}-M.jpg" alt="Book Cover" loading="lazy" width="200"
-            //                     height="300">
-            //                     <a href="https://openlibrary.org/${eachBook.key}" target="_blank" class="btn">Learn more</a>
-            //             </figure>    
-            //         </section>
-            //     `;
             bookCard += sectionForHome(eachBook);
         }
-        // });
     } else if (data.docs.length === 1) {
         const section = `
                     <section class="card">
@@ -70,7 +52,6 @@ async function fetchAPI(searchText) {
         bookCard += "Search not found";
     }
 
-    console.log(data);
     return bookCard;
 }
 
