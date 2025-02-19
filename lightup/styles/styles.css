@@ -120,7 +120,7 @@ nav a.active {
 .card h3 {
     font-size: 1rem;
     margin: 0;
-    padding: 8px;
+    padding: .8rem 1rem;
     max-width: fit-content;
     word-wrap: break-word;
 }
