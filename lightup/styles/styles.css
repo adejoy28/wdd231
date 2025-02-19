@@ -9,7 +9,7 @@
     --accent-color-2: #813640;
     --accent-color-3: #884088;
     --accent-color-4: #D8D8D8;
-    --footer-color: #1F2F16;
+    --footer-color: #3d3939;
     --background-color: #bccac1;
     --text-color: #2c3e50;
     --header-font: 'Lato', sans-serif;
@@ -90,17 +90,26 @@ nav a.active {
 
 /* Hambuger Menu Design */
 .small-menu-button {
+    background: transparent;
     display: block;
     outline: none;
     border: none;
-    background: transparent;
-    color: var(--accent-color-4);
-    padding: 10px;
     height: fit-content;
+    transition: content 5s ease-out;
+    color: var(--white-color);
+
 }
 
-.small-menu-button:hover {
-    background-color: var(--accent-color);
+.small-menu-button::before {
+    content: "\268C";
+    font-size: 1.5em;
+}
+
+.small-menu-button.open::before {
+    content: "\2613";
+    font-size: 1.5em;
+    font-weight: bold;
+    /* color: var(--accent-color); */
 }
 
 /* Book Card */
@@ -110,7 +119,7 @@ nav a.active {
     padding: 10px;
     margin: 10px;
     width: 120px;
-    flex-grow: 2;
+    /* flex-grow: 2; */
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;

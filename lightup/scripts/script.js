@@ -3,6 +3,7 @@ const navContainer = document.querySelector("#navContainer");
 
 smallMenuButton.addEventListener("click", () => {
     navContainer.classList.toggle("open");
+    smallMenuButton.classList.toggle("open");
 });
 
 // Subscribe Newsletter Scripting
