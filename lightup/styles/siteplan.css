@@ -266,7 +266,7 @@ nav a:visited {
 
 .mobile-view {
     display: flex;
-    flex-direction: rows;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
