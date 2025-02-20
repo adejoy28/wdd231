@@ -85,7 +85,7 @@ header .site-title img {
     align-self: center;
 }
 
-header .site-title h1 {
+header .site-title h2 {
     margin: 0;
     font-size: 2.5em;
     grid-area: logo;
