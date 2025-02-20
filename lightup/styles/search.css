@@ -3,7 +3,7 @@
     margin: 0 auto;
     place-content: center;
     display: grid;
-    grid-template-columns: repeat(auto, );
+    /* grid-template-columns: repeat(auto, ?); */
 }
 
 .container h2 {
