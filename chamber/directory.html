@@ -1,125 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Leme Chamber of Commerce</title>
-        <meta name="description" content="This is a directory of members in the area">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="John Adebayo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leme Chamber of Commerce</title>
+    <meta name="description" content="This is a directory of members in the area">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Adebayo">
 
-        <!-- for Social Sharing -->
+    <!-- for Social Sharing -->
+    <meta property="og:title" content="Leme Chamber Directory Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://adejoy28.github.io/wdd231/chamber/images/logo-social.svg">
+    <meta property="og:url" content="https://adejoy28.github.io/wdd231/chamber/directory.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:description" content="Explore the comprehensive directory of businesses and members in the Leme Chamber of Commerce. Find contact information, addresses, and descriptions of local businesses.">
+    <meta property="og:site_name" content="Leme Chamber of Commerce">
+    <meta name="twitter:image:alt" content="Leme Chamber of Commerce image">
+    <meta property="fb:app_id" content="your_app_id">
+    <meta name="twitter:site" content="@website-username">
 
-        <!--  Essential META Tags -->
-        <meta property="og:title" content="Leme Chamber Directory Page">
-        <!-- <meta property="og:type" content="This displays members directory"> -->
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://adejoy28.github.io/wdd231/chamber/images/logo-social.svg">
-        <meta property="og:url" content="https://adejoy28.github.io/wdd231/chamber/directory.html">
-        <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles-medium.css">
+    <link rel="stylesheet" href="styles/styles-large.css">
+    <link rel="stylesheet" href="styles/directory/directory.css">
 
-        <!--  Non-Essential, But Recommended -->
-        <meta property="og:description"
-            content="Explore the comprehensive directory of businesses and members in the Leme Chamber of Commerce. Find contact information, addresses, and descriptions of local businesses.">
-        <meta property="og:site_name" content="Leme Chamber of Commerce">
-        <meta name="twitter:image:alt" content="Leme Chamber of Commerce imagde">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
 
-        <!--  Non-Essential, But Required for Analytics -->
-        <meta property="fb:app_id" content="your_app_id">
-        <meta name="twitter:site" content="@website-username">
+    <script src="scripts/script.js" type="module" defer></script>
+    <script src="scripts/directory.js" type="module" defer></script>
+</head>
 
-        <!-- Social Sharing ends -->
-
-
-        <link rel="icon" href="images/favicon.svg">
-
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/styles-medium.css">
-        <link rel="stylesheet" href="styles/styles-large.css">
-        <link rel="stylesheet" href="styles/directory/directory.css">
-
-        <!-- Font awesome -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"> -->
-
-
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
-
-        <script src="scripts/script.js" type="module"></script>
-        <script src="scripts/directory.js" type="module"></script>
-    </head>
-
-    <body>
-        <header>
-            <div class="container">
-
-                <div class="site-title">
-                    <img src="images/logo.svg" alt="Chamber of Commerce Logo">
-                    <h1>Leme</h1>
-                    <p>Chamber of Commerce</p>
-                </div>
-                <button id="hamburger-btn" class="hamburger-btn" aria-label="menu-button"></button>
-                <nav id="animate-me" class="show visibility">
-                    <ul class="menu-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="directory.html" class="active">Business Directory</a></li>
-                        <li><a href="discover.html">Discover</a></li>
-                        <li><a href="join.html">Join</a></li>
-                        <!-- <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Podcast</a></li>
-                    <li><a href="#">Event</a></li> -->
-                    </ul>
-                </nav>
-                <button class="theme">&#9775;</button>
+<body>
+    <header>
+        <div class="container">
+            <div class="site-title">
+                <img src="images/logo.svg" alt="Chamber of Commerce Logo" width="48" height="35">
+                <h1>Leme</h1>
+                <p>Chamber of Commerce</p>
             </div>
-        </header>
-        <main>
-            <h1>Members Directory</h1>
-
-            <div class="grid-list-container" id="grid-list-container">
-
-                <button type="button" id="grid-btn" class="btn grid"><img src="images/font-awesome/th-solid.svg"
-                        alt="grid" width="30" height="30"></button>
-                <button type="button" id="list-btn" class="btn list"><img src="images/font-awesome/list-solid.svg"
-                        alt="list-btn" width="35" height="30"></button>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="menu-button"></button>
+            <nav id="animate-me" class="show visibility">
+                <ul class="menu-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="active">Business Directory</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+            <button class="theme" aria-label="theme-toggle">&#9775;</button>
+        </div>
+    </header>
+    <main>
+        <h1>Members Directory</h1>
+        <div class="grid-list-container" id="grid-list-container">
+            <button type="button" id="grid-btn" class="btn grid" aria-label="grid-view"><img src="images/font-awesome/th-solid.svg" alt="grid" width="30" height="30"></button>
+            <button type="button" id="list-btn" class="btn list" aria-label="list-view"><img src="images/font-awesome/list-solid.svg" alt="list-btn" width="35" height="30"></button>
+        </div>
+        <div id="cards" class="grid"></div>
+    </main>
+    <footer>
+        <dialog id="welcomeMessage">
+            <div class="dialog-container">
+                <button id="closeModal" aria-label="close-dialog">❌</button>
+                <h2 id="message">Welcome! Let us know if you have any questions.</h2>
             </div>
-            <div id="cards" class="grid">
+        </dialog>
+        <div class="footer-container">
+            <div class="site-details">
+                <p>Leme Chamber of Commerce</p>
+                <p>10 Rue De la Paix</p>
+                <p>Leme, Mail 000</p>
+                <p>info@Lemecc.org</p>
+                <p>(223) 555-2300</p>
             </div>
-        </main>
-         <footer>
-             <dialog id="welcomeMessage">
-                 <div class="dialog-container">
-                     <button id="closeModal">❌</button>
-                     <h2 id="message">Welcome! Let us know if you have any questions.</h2>
-                 </div>
-             </dialog>
-             <div class="footer-container">
-                 <div class="site-details">
-                     <p>Leme Chamber of Commerce</p>
-                     <p>10 Rue De la Paix</p>
-                     <p>Leme, Mail 000</p>
-                     <p>info@Lemecc.org</p>
-                     <p>(223) 555-2300</p>
-                 </div>
-                 <div class="socials">
-                     <img src="images/font-awesome/youtube-brands-solid.svg" alt="youtube" width="40" height="40">
-                     <img src="images/font-awesome/twitter-brands-solid.svg" alt="twitter" width="40" height="40">
-                     <img src="images/font-awesome/linkedin-brands-solid.svg" alt="linkedin" width="40" height="40">
-                 </div>
-                 <div class="author-details">
-                     <p>WDD231 Class Project</p>
-                     <p>John Adebayo</p>
-                     <p>&copy; <span id="Year"></span>Chamber of Commerce</p>
-                     <p class="lstMod">{Last Modification: <span id="lastModified"></span>}</p>
-                 </div>
+            <div class="socials">
+                <img src="images/font-awesome/youtube-brands-solid.svg" alt="youtube" width="40" height="40">
+                <img src="images/font-awesome/twitter-brands-solid.svg" alt="twitter" width="40" height="40">
+                <img src="images/font-awesome/linkedin-brands-solid.svg" alt="linkedin" width="40" height="40">
+            </div>
+            <div class="author-details">
+                <p>WDD231 Class Project</p>
+                <p>John Adebayo</p>
+                <p>&copy; <span id="Year"></span> Chamber of Commerce</p>
+                <p class="lstMod">Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
 
-             </div>
-         </footer>
-         </body>
-
-         </html>
+</html>

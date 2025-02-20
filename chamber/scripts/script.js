@@ -20,7 +20,6 @@ window.addEventListener("DOMContentLoaded", () => {
     // Check if the user has visited before
     if (localStorage.getItem("dateTimeToday") === null) {
         // First time visit
-        localStorage.setItem("dateTimeToday", dateTimeToday);
         message = `Welcome! Let us know if you have any questions.`;
     } else {
         // Returning visit
@@ -36,6 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     // Display the welcome modal with the message
     displayModal(message);
+    localStorage.setItem("dateTimeToday", dateTimeToday);
 });
 
 // Function to display the welcome modal
